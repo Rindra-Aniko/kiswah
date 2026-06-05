@@ -8,6 +8,8 @@ import { HiCalendar, HiArrowRight, HiChevronLeft, HiChevronRight, HiSearch } fro
 import ArticleFilters from './ArticleFilters';
 import { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: "Info & Artikel Religi",
   description: "Dapatkan tips beribadah Umrah & Haji, kisah inspiratif, serta informasi terbaru dari Kiswah Tour & Travel.",

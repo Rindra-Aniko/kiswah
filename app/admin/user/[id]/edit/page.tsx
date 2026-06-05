@@ -8,6 +8,8 @@ import EditUserForm from './EditUserForm';
 import Link from 'next/link';
 import { HiArrowLeft } from 'react-icons/hi';
 
+export const runtime = 'edge';
+
 export default async function EditUserPage({ params }: { params: Promise<{ id: string }> }) {
   const session = await getSession();
   const { id } = await params;

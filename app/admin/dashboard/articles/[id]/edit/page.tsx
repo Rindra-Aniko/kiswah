@@ -6,6 +6,8 @@ import { getSession } from '@/lib/auth';
 import { redirect, notFound } from 'next/navigation';
 import EditArticleForm from './EditArticleForm';
 
+export const runtime = 'edge';
+
 export default async function EditArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const session = await getSession();
   if (!session) {

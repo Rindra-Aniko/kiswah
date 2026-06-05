@@ -7,6 +7,7 @@ import { desc } from 'drizzle-orm';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export const metadata: Metadata = {
   title: "Jadwal Keberangkatan & Sisa Kuota",

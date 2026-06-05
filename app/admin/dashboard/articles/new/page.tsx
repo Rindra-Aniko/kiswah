@@ -4,6 +4,8 @@ import { getSession } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { db } from '@/lib/db';
 
+export const runtime = 'edge';
+
 export default async function NewArticlePage() {
   const session = await getSession();
   if (!session) {
