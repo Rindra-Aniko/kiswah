@@ -6,6 +6,8 @@ import { schedules } from '@/lib/db/schema';
 import { desc } from 'drizzle-orm';
 import { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Jadwal Keberangkatan & Sisa Kuota",
   description: "Cek jadwal keberangkatan ibadah Umrah dan sisa kuota kursi secara real-time bersama Kiswah Tour & Travel.",
