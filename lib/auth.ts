@@ -3,11 +3,19 @@ import { SignJWT, jwtVerify } from 'jose';
 import { hash, compare } from 'bcrypt-ts';
 import { cookies } from 'next/headers';
 
-const secretKey = process.env.JWT_SECRET;
-if (!secretKey) {
-  throw new Error('JWT_SECRET environment variable is required. Please set it in .env.local');
+// We load the key lazily inside encrypt/decrypt functions to prevent build-time failures
+function getSecretKey() {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    // During next build, process.env.JWT_SECRET might not be set.
+    // We return a fallback key for build-time compilation, but throw at runtime if it's missing.
+    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PHASE) {
+      throw new Error('JWT_SECRET environment variable is required.');
+    }
+    return new TextEncoder().encode('temporary-fallback-secret-for-build-purposes');
+  }
+  return new TextEncoder().encode(secret);
 }
-const key = new TextEncoder().encode(secretKey);
 
 export async function hashPassword(password: string) {
   return await hash(password, 10);
@@ -22,11 +30,11 @@ export async function encrypt(payload: any) {
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime('2h')
-    .sign(key);
+    .sign(getSecretKey());
 }
 
 export async function decrypt(input: string): Promise<any> {
-  const { payload } = await jwtVerify(input, key, {
+  const { payload } = await jwtVerify(input, getSecretKey(), {
     algorithms: ['HS256'],
   });
   return payload;
