@@ -1,6 +1,6 @@
 import 'server-only';
 import { drizzle } from 'drizzle-orm/libsql';
-import { createClient } from '@libsql/client';
+import { createClient } from '@libsql/client/web';
 import * as schema from './schema';
 
 const dbUrl = process.env.DATABASE_URL || (process.env.NEXT_RUNTIME === 'edge' ? "libsql://dummy.turso.io" : "file:local.db");
