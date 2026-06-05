@@ -1,5 +1,5 @@
 import 'server-only';
-import { drizzle } from 'drizzle-orm/libsql';
+import { drizzle } from 'drizzle-orm/libsql/web';
 import { createClient } from '@libsql/client/web';
 import * as schema from './schema';
 
