@@ -29,11 +29,14 @@ export default function UserList({ initialUsers, currentRole }: { initialUsers: 
     
     if (isNaN(date.getTime())) return '-';
     
-    return date.toLocaleDateString('id-ID', { 
-      day: 'numeric', 
-      month: 'long', 
-      year: 'numeric' 
-    });
+    const day = date.getDate();
+    const months = [
+      'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
   };
 
   const handleDelete = async (id: number) => {
