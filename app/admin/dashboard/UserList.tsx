@@ -104,6 +104,7 @@ export default function UserList({ initialUsers, currentRole }: { initialUsers: 
             </span>
             <input
               type="text"
+              suppressHydrationWarning
               className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#291F15] focus:border-transparent text-sm"
               placeholder="Cari nama atau email..."
               value={searchTerm}
@@ -191,15 +192,15 @@ export default function UserList({ initialUsers, currentRole }: { initialUsers: 
               )}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                <input name="name" type="text" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="Masukkan nama..." />
+                <input name="name" type="text" required suppressHydrationWarning className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="Masukkan nama..." />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input name="email" type="email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="admin@kiswah.id" />
+                <input name="email" type="email" required suppressHydrationWarning className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="admin@kiswah.id" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Kata Sandi</label>
-                <input name="password" type="password" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="••••••••" />
+                <input name="password" type="password" required suppressHydrationWarning className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] outline-none" placeholder="••••••••" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>

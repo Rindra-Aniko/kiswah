@@ -38,6 +38,7 @@ export default function ArticleFilters({ categories }: { categories: any[] }) {
             placeholder="Cari artikel, tips, atau berita..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            suppressHydrationWarning
             className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#291F15] focus:border-transparent outline-none transition-all text-lg"
           />
           <HiSearch className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 group-focus-within:text-[#291F15] transition-colors" />

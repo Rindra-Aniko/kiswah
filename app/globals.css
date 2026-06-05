@@ -40,6 +40,7 @@ body {
     color: var(--foreground);
   }
 
+
   /* Limit max height for images in articles (prose) using viewport units */
   .prose img {
     max-height: 60vh;
@@ -50,4 +51,14 @@ body {
     border-radius: 0.75rem;
   }
 }
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite ease-in-out;
+}
+
 

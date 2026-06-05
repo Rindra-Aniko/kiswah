@@ -44,6 +44,7 @@ export default function ArticleList({ initialArticles }: { initialArticles: any[
             placeholder="Cari judul artikel..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            suppressHydrationWarning
           />
         </div>
       </div>
@@ -113,7 +114,7 @@ export default function ArticleList({ initialArticles }: { initialArticles: any[
             ))}
             {filteredArticles.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-6 py-12 text-center text-gray-500">
+                <td colSpan={6} className="px-6 py-12 text-center text-gray-500">
                   Belum ada artikel yang ditemukan.
                 </td>
               </tr>

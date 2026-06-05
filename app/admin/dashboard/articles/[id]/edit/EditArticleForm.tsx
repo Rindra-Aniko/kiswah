@@ -100,6 +100,7 @@ export default function EditArticleForm({ article, categories }: { article: any,
                 required 
                 value={title}
                 onChange={handleTitleChange}
+                suppressHydrationWarning
                 className="w-full px-4 py-3 text-lg font-bold border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] focus:border-transparent outline-none transition-all" 
                 placeholder="Masukkan judul artikel..." 
               />
@@ -118,6 +119,7 @@ export default function EditArticleForm({ article, categories }: { article: any,
                     required 
                     value={slug}
                     onChange={(e) => setSlug(e.target.value)}
+                    suppressHydrationWarning
                     className="flex-1 px-4 py-2 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-[#291F15] focus:border-transparent outline-none transition-all text-sm font-mono" 
                   />
                 </div>
@@ -127,6 +129,7 @@ export default function EditArticleForm({ article, categories }: { article: any,
                 <select 
                   name="categoryId"
                   defaultValue={article.categoryId || ""}
+                  suppressHydrationWarning
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] focus:border-transparent outline-none transition-all text-sm bg-white"
                 >
                   <option value="">Pilih Kategori...</option>
@@ -141,6 +144,7 @@ export default function EditArticleForm({ article, categories }: { article: any,
                   name="featuredImage"
                   type="url" 
                   defaultValue={article.featuredImage}
+                  suppressHydrationWarning
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#291F15] focus:border-transparent outline-none transition-all text-sm" 
                   placeholder="https://example.com/image.jpg" 
                 />

@@ -1,6 +1,6 @@
 import 'server-only';
 import { SignJWT, jwtVerify } from 'jose';
-import bcrypt from 'bcryptjs';
+import { hash, compare } from 'bcrypt-ts';
 import { cookies } from 'next/headers';
 
 const secretKey = process.env.JWT_SECRET;
@@ -10,11 +10,11 @@ if (!secretKey) {
 const key = new TextEncoder().encode(secretKey);
 
 export async function hashPassword(password: string) {
-  return await bcrypt.hash(password, 10);
+  return await hash(password, 10);
 }
 
 export async function verifyPassword(password: string, hash: string) {
-  return await bcrypt.compare(password, hash);
+  return await compare(password, hash);
 }
 
 export async function encrypt(payload: any) {

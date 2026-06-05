@@ -51,6 +51,7 @@ export default function AdminLoginPage() {
                 name="email"
                 type="text"
                 required
+                suppressHydrationWarning
                 className="mt-1 block w-full px-4 py-3 border border-[#291F15]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#291F15] focus:border-transparent transition-all"
                 placeholder="admin@kiswah.id"
               />
@@ -66,6 +67,7 @@ export default function AdminLoginPage() {
                   name="password"
                   type={showPassword ? 'text' : 'password'}
                   required
+                  suppressHydrationWarning
                   className="block w-full px-4 py-3 border border-[#291F15]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#291F15] focus:border-transparent transition-all"
                   placeholder="••••••••"
                 />

@@ -39,6 +39,7 @@ export default function ScheduleList({ initialSchedules }: { initialSchedules: a
             placeholder="Cari jadwal, paket, atau maskapai..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            suppressHydrationWarning
           />
         </div>
       </div>

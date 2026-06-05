@@ -44,16 +44,6 @@ const WhatsAppFloat = () => {
         {/* Glow Effect */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 group-hover:animate-ping -z-10"></span>
       </a>
-
-      <style jsx global>{`
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 3s infinite ease-in-out;
-        }
-      `}</style>
     </div>
   );
 };
