@@ -5,6 +5,7 @@ import { db } from '@/lib/db';
 import { schedules } from '@/lib/db/schema';
 import { desc } from 'drizzle-orm';
 import { Metadata } from 'next';
+import ScrollReveal from '../components/ScrollReveal';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'edge';
@@ -75,13 +76,13 @@ export default async function JadwalPage() {
       <section className="w-full bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Jadwal */}
-          <div className="flex flex-col items-center text-center mb-16" data-aos="fade-up">
+          <ScrollReveal className="flex flex-col items-center text-center mb-16" animation="fade-up">
             <h2 className="text-3xl md:text-5xl font-bold text-[#291F15] uppercase tracking-[0.15em] mb-4" style={{ fontFamily: "'Nova Square', sans-serif" }}>
               JADWAL KEBERANGKATAN
             </h2>
             <p className="text-[#B48421] font-freehand text-2xl md:text-3xl">Pilih Waktu Terbaik Untuk Ibadah Anda</p>
             <div className="w-24 h-1 bg-[#BD8A15] mt-6 rounded-full opacity-60" />
-          </div>
+          </ScrollReveal>
 
           {/* Grid Container Utama */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -89,11 +90,11 @@ export default async function JadwalPage() {
               const isFull = item.seatsAvailable?.trim().toUpperCase() === 'FULL';
 
               return (
-                <div 
+                <ScrollReveal 
                   key={item.id}
+                  animation="fade-up"
+                  delay={(index % 4) * 100}
                   className="bg-[#FFFFFF] border-2 border-[#BD8A15] rounded-[2rem] p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 4) * 100}
                 >
                   {/* Bagian Atas: Bulan & Tahun Keberangkatan */}
                   <div>
@@ -157,7 +158,7 @@ export default async function JadwalPage() {
                       className="w-full max-w-[180px] py-2 px-4 rounded-xl"
                     />
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>

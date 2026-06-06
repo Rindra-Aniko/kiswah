@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
 import { Metadata } from 'next';
+import ScrollReveal from '../components/ScrollReveal';
 
 export const metadata: Metadata = {
   title: "Tentang Kami",
@@ -110,19 +111,19 @@ export default function TentangKamiPage() {
         <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {/* Tim Profesional */}
           <div className="flex flex-col items-center">
-            <div className="text-center space-y-2 mb-12 sm:mb-16" data-aos="fade-up">
+            <ScrollReveal className="text-center space-y-2 mb-12 sm:mb-16" animation="fade-up">
               <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl text-[#B48421] tracking-wide uppercase">
                 TIM PROFESIONAL KAMI
               </h2>
               <p className="font-poppins font-normal text-sm sm:text-base md:text-lg text-[#291F15]/90 tracking-medium">
                 Sehangat Kiswah Setulus Pelayanan Kami
               </p>
-            </div>
+            </ScrollReveal>
 
             {/* Grid Layout 3 Kolom (Sejajar di Mobile & Desktop) */}
             <div className="grid grid-cols-3 gap-3 sm:gap-10 md:gap-14 lg:gap-10 w-full max-w-5xl justify-center mx-auto">
               {professionalTeam.map((member, index) => (
-                <div key={member.id} className="flex flex-col items-center text-center space-y-2 sm:space-y-4 lg:space-y-3 group" data-aos="zoom-in" data-aos-delay={index * 150}>
+                <ScrollReveal key={member.id} animation="zoom-in" delay={index * 150} className="flex flex-col items-center text-center space-y-2 sm:space-y-4 lg:space-y-3 group">
                   <div className="relative w-20 h-20 sm:w-48 sm:h-48 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-[#BD8A15]/20 shadow-md transition-all duration-500 group-hover:border-[#BD8A15]/60 group-hover:shadow-lg">
                     <Image
                       src={member.imageSrc}
@@ -140,7 +141,7 @@ export default function TentangKamiPage() {
                       {member.role}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

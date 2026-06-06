@@ -1,5 +1,6 @@
 import Cekpaket from "./components/Cekpaket.Component";
 import TestimoniCarousel from "./components/Testimoni.Component";
+import ScrollReveal from "./components/ScrollReveal";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -123,7 +124,8 @@ export default function BerandaPage() {
       <div className="max-w-7xl mx-auto">
         
         {/* Judul Section Utama */}
-        <div className="text-center mb-16" data-aos="fade-up">
+        <ScrollReveal animation="fade-up">
+        <div className="text-center mb-16">
           <h2 className="font-freehand text-4xl sm:text-5xl md:text-6xl text-[#B48421] inline-block tracking-wide">
             Kenapa ini
           </h2>
@@ -131,6 +133,7 @@ export default function BerandaPage() {
             spesial ?
           </span>
         </div>
+        </ScrollReveal>
 
         {/* Grid Konten (Terbagi 2 Kolom pada Desktop dengan garis pembatas tengah) */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-12">
@@ -139,7 +142,8 @@ export default function BerandaPage() {
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gray-300 transform -translate-x-1/2" />
 
           {featureList.map((item, index) => (
-            <div key={item.id} className="flex items-start space-x-4 sm:space-x-5" data-aos="fade-up" data-aos-delay={index * 100}>
+            <ScrollReveal key={item.id} animation="fade-up" delay={index * 100}>
+            <div className="flex items-start space-x-4 sm:space-x-5">
               
               {/* Lingkaran Nomor Urut (Aksen Emas) */}
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#B48421] flex items-center justify-center shadow-md">
@@ -159,6 +163,7 @@ export default function BerandaPage() {
               </div>
 
             </div>
+            </ScrollReveal>
           ))}
 
         </div>

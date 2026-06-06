@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar.Components";
 import Footer from "./components/Footer.Component";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import NextTopLoader from 'nextjs-toploader';
-import { AOSInit } from "./components/AOSInit";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -90,7 +89,6 @@ export default function RootLayout({
         {children}
         <WhatsAppFloat />
         <Footer />
-        <AOSInit />
       </body>
     </html>
   );

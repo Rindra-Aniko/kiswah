@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import WhatsAppButton from '../components/WhatsAppButton.Component';
+import ScrollReveal from '../components/ScrollReveal';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -193,7 +194,8 @@ export default function LayananPage() {
       <section>
         <div className="bg-[#FFFFFF] text-[#291F15] font-sans antialiased min-h-[80vh] pt-12 pb-20 px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
-          <div className="max-w-7xl mx-auto text-center mb-16" data-aos="fade-up">
+          <ScrollReveal animation="fade-up">
+          <div className="max-w-7xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-4 h-10 bg-[#B48421]"></div>
               <h1 className="text-4xl font-bold tracking-wider uppercase text-[#291F15] font-nova-square">
@@ -210,11 +212,14 @@ export default function LayananPage() {
               Kenyamanan Anda adalah prioritas kami, melalui pilihan paket yang dirancang khusus untuk Anda.
             </p>
           </div>
+          </ScrollReveal>
 
           {/* Cards Container Grid */}
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <ScrollReveal animation="fade-up" delay={200}>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {mapPackages()}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -228,15 +233,18 @@ export default function LayananPage() {
       <div className="max-w-7xl mx-auto">
         
         {/* PAKET HAJI KHUSUS */}
-        <div className="flex items-center gap-3 mb-8" data-aos="fade-right">
+        <ScrollReveal animation="fade-right">
+        <div className="flex items-center gap-3 mb-8">
           <div className="w-4 h-10 bg-[#B48421]" />
           <h2 className="text-4xl font-bold tracking-wider uppercase" style={{ fontFamily: "'Nova Square', sans-serif" }}>
             PAKET HAJI KHUSUS
           </h2>
         </div>
+        </ScrollReveal>
 
         {/* Teks Pemikat Utama */}
-        <div className="max-w-4xl mb-14" style={{ fontFamily: "'Poppins', sans-serif" }} data-aos="fade-up">
+        <ScrollReveal animation="fade-up">
+        <div className="max-w-4xl mb-14" style={{ fontFamily: "'Poppins', sans-serif" }}>
           <p className="text-2xl sm:text-3xl font-bold tracking-tight text-[#291F15] mb-4">
             Mau naik haji tapi gak mau nunggu sampai puluhan tahun?
           </p>
@@ -245,12 +253,13 @@ export default function LayananPage() {
             tetapi <span className="text-[#B48421] font-bold italic">kenyamanan dan kemewahan</span> beribadah juga akan Anda dapatkan di sini.
           </p>
         </div>
+        </ScrollReveal>
 
         {/* Grid Content: Foto & Nilai Jual */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           
           {/* Kolom Kiri: Visual/Foto Jemaah di Depan Ka'bah */}
-          <div className="lg:col-span-5 relative group" data-aos="fade-right">
+          <ScrollReveal animation="fade-right" className="lg:col-span-5 relative group">
             {/* Dekorasi Bingkai Belakang khas Gaya Eksklusif */}
             <div className="absolute -inset-2 bg-gradient-to-tr from-[#BD8A15] to-[#B48421] rounded-[2rem] opacity-30 blur-sm group-hover:opacity-40 transition-opacity duration-300" />
             
@@ -263,10 +272,10 @@ export default function LayananPage() {
                 className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
               />
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Kolom Kanan: Poin Informasi "Apa yang Anda Dapatkan" */}
-          <div className="lg:col-span-7 flex flex-col justify-center py-4" style={{ fontFamily: "'Poppins', sans-serif" }} data-aos="fade-left">
+          <ScrollReveal animation="fade-left" className="lg:col-span-7 flex flex-col justify-center py-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
             <div>
               {/* Sub-judul dengan Sentuhan Elegant Touch */}
               <p className="text-xl text-[#B48421] mb-2" style={{ fontFamily: "'Freehand', cursive" }}>
@@ -296,8 +305,7 @@ export default function LayananPage() {
                 Coming Soon
               </span>
             </div>
-
-          </div>
+          </ScrollReveal>
 
         </div>
 

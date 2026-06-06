@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { HiCalendar, HiArrowRight, HiChevronLeft, HiChevronRight, HiSearch } from 'react-icons/hi';
 import ArticleFilters from './ArticleFilters';
 import { Metadata } from 'next';
+import ScrollReveal from '../components/ScrollReveal';
 
 export const runtime = 'edge';
 
@@ -106,72 +107,75 @@ export default async function ArtikelPage({
       </div>
 
       <main className="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
-        {/* Client-side Filters */}
         <Suspense fallback={<div className="h-20 bg-white rounded-2xl animate-pulse mb-12 shadow-sm" />}>
-          <div data-aos="fade-up">
+          <ScrollReveal animation="fade-up">
             <ArticleFilters categories={allCategories} />
-          </div>
+          </ScrollReveal>
         </Suspense>
 
         {/* Results Info */}
         {(search || categorySlug) && (
-          <div className="mb-8 text-gray-600 font-medium" data-aos="fade-right">
+          <ScrollReveal className="mb-8 text-gray-600 font-medium" animation="fade-right">
             Menampilkan <span className="text-[#291F15] font-bold">{totalArticles}</span> hasil 
             {search && <> untuk "<span className="text-[#291F15]">{search}</span>"</>}
             {categorySlug && <> di kategori "<span className="text-[#291F15]">{allCategories.find(c => c.slug === categorySlug)?.name}</span>"</>}
-          </div>
+          </ScrollReveal>
         )}
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {publishedArticles.map((article, index) => (
-            <Link 
-              key={article.id} 
-              href={`/artikel/${article.slug}`}
+            <ScrollReveal
+              key={article.id}
+              animation="fade-up"
+              delay={(index % 3) * 100}
               className="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
-              data-aos="fade-up"
-              data-aos-delay={(index % 3) * 100}
             >
-              {/* Featured Image */}
-              <div className="relative h-56 w-full bg-gray-200 overflow-hidden">
-                {article.featuredImage ? (
-                  <Image 
-                    src={article.featuredImage} 
-                    alt={article.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-amber-800 font-bold text-xl">
-                    Kiswah.id
+              <Link 
+                href={`/artikel/${article.slug}`}
+                className="flex-1 flex flex-col"
+              >
+                {/* Featured Image */}
+                <div className="relative h-56 w-full bg-gray-200 overflow-hidden">
+                  {article.featuredImage ? (
+                    <Image 
+                      src={article.featuredImage} 
+                      alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-amber-800 font-bold text-xl">
+                      Kiswah.id
+                    </div>
+                  )}
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-[#291F15] text-xs font-bold rounded-full shadow-sm border border-gray-100">
+                      {article.category?.name || 'Umum'}
+                    </span>
                   </div>
-                )}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-[#291F15] text-xs font-bold rounded-full shadow-sm border border-gray-100">
-                    {article.category?.name || 'Umum'}
-                  </span>
                 </div>
-              </div>
 
-              {/* Card Content */}
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 text-gray-500 text-xs mb-3 font-medium">
-                  <HiCalendar className="w-4 h-4 text-amber-600" />
-                  <span>{formatDate(article.createdAt)}</span>
+                {/* Card Content */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 text-gray-500 text-xs mb-3 font-medium">
+                    <HiCalendar className="w-4 h-4 text-amber-600" />
+                    <span>{formatDate(article.createdAt)}</span>
+                  </div>
+                  <h2 className="text-xl font-bold text-[#291F15] group-hover:text-amber-800 transition-colors line-clamp-2 mb-3 leading-tight">
+                    {article.title}
+                  </h2>
+                  <div className="text-gray-600 text-sm line-clamp-3 mb-6 flex-1 leading-relaxed">
+                    {(article.content || '').replace(/<[^>]*>?/gm, '').substring(0, 150)}...
+                  </div>
+                  <div className="flex items-center text-sm font-bold text-[#291F15] group-hover:text-amber-800 transition-all">
+                    Baca Selengkapnya
+                    <HiArrowRight className="ml-2 w-4 h-4 translate-x-0 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-                <h2 className="text-xl font-bold text-[#291F15] group-hover:text-amber-800 transition-colors line-clamp-2 mb-3 leading-tight">
-                  {article.title}
-                </h2>
-                <div className="text-gray-600 text-sm line-clamp-3 mb-6 flex-1 leading-relaxed">
-                  {(article.content || '').replace(/<[^>]*>?/gm, '').substring(0, 150)}...
-                </div>
-                <div className="flex items-center text-sm font-bold text-[#291F15] group-hover:text-amber-800 transition-all">
-                  Baca Selengkapnya
-                  <HiArrowRight className="ml-2 w-4 h-4 translate-x-0 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
 
