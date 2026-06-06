@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Layanan Umrah & Haji | Kiswah.id",
     description: "Pilihan paket perjalanan ibadah Umrah dan Haji Khusus eksklusif dengan pelayanan mutawwif berpengalaman dan akomodasi premium.",
     url: "https://kiswah.id/layanan",
-    images: ["/image/girl_tu.Avif"],
+    images: ["/image/girl_tu.webp"],
   }
 };
 
