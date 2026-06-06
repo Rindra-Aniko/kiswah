@@ -126,18 +126,8 @@ export default function LayananPage() {
   return (
     <div>
       <section 
-        className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden pt-1 pb-8"
+        className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden pt-1 pb-8 bg-white"
       >
-      <Image
-        src="/image/hero.webp"
-        alt="Hero Background"
-        fill
-        priority
-        unoptimized
-        className="object-cover object-center select-none pointer-events-none z-0"
-      />
-      {/* Overlay Putih untuk kesan bersih dan elegan sekaligus masking opacity */}
-      <div className="absolute inset-0 bg-white/80 z-10" />
 
       {/* Container Utama dengan Grid Responsif */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center z-20">

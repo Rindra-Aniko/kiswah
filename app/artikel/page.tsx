@@ -89,7 +89,7 @@ export default async function ArtikelPage({
         className="relative py-24 px-4 overflow-hidden"
       >
         <Image
-          src="/image/melepas_jemaah.webp"
+          src="/image/haji_khusus.webp"
           alt="Info Background"
           fill
           priority
