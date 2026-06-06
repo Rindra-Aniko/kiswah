@@ -4,7 +4,8 @@ import { users } from '@/lib/db/schema';
 import { getSession } from '@/lib/auth';
 import UserList from './UserList';
 import { logoutAction } from '@/lib/actions/auth';
-import { HiLogout, HiBookOpen, HiUsers, HiCalendar } from 'react-icons/hi';
+import { HiBookOpen, HiUsers, HiCalendar } from 'react-icons/hi';
+import LogoutButton from '../../components/LogoutButton.Component';
 import Link from 'next/link';
 
 
@@ -34,13 +35,7 @@ export default async function AdminDashboardPage() {
           </div>
           <div className="flex gap-4">
             <form action={logoutAction}>
-              <button 
-                type="submit"
-                className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-secondary hover:text-white transition-all font-medium text-sm shadow-sm onclick:bg-gray-100"
-              >
-                <HiLogout className="w-5 h-5" />
-                Keluar
-              </button>
+              <LogoutButton />
             </form>
           </div>
         </div>
