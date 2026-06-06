@@ -36,7 +36,7 @@ export default async function AdminDashboardPage() {
             <form action={logoutAction}>
               <button 
                 type="submit"
-                className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all font-medium text-sm shadow-sm"
+                className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-secondary hover:text-white transition-all font-medium text-sm shadow-sm onclick:bg-gray-100"
               >
                 <HiLogout className="w-5 h-5" />
                 Keluar
