@@ -4,6 +4,19 @@ import { decrypt, encrypt } from '@/lib/auth';
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // If user is already logged in and visits /admin, redirect to /admin/dashboard
+  if (pathname === '/admin') {
+    const session = request.cookies.get('session')?.value;
+    if (session) {
+      try {
+        await decrypt(session);
+        return NextResponse.redirect(new URL('/admin/dashboard', request.url));
+      } catch (error) {
+        // Session invalid, let them access /admin to log in again
+      }
+    }
+  }
+
   // Protect /admin/dashboard and /admin/user
   if (pathname.startsWith('/admin/dashboard') || pathname.startsWith('/admin/user')) {
     const session = request.cookies.get('session')?.value;
@@ -51,5 +64,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/dashboard/:path*', '/admin/user/:path*'],
+  matcher: ['/admin', '/admin/dashboard/:path*', '/admin/user/:path*'],
 };
