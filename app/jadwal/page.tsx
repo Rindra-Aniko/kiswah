@@ -35,6 +35,7 @@ export default async function JadwalPage() {
           alt="Baitullah Background"
           fill
           priority
+          quality={75}
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />

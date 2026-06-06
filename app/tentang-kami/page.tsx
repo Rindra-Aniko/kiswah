@@ -49,6 +49,7 @@ export default function TentangKamiPage() {
           alt="Pelayanan Background"
           fill
           priority
+          quality={75}
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
@@ -196,6 +197,7 @@ export default function TentangKamiPage() {
                 src="/gallery/kantor.webp"
                 alt="Kantor Pusat Kiswah Umrah Maqbul"
                 fill
+                quality={75}
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -207,8 +209,8 @@ export default function TentangKamiPage() {
                 src="/gallery/ruang_bos.webp"
                 alt="Ruang Resepsionis Utama Kiswah Tour & Travel"
                 fill
+                quality={75}
                 sizes="(max-width: 768px) 100vw, 60vw"
-                priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-[#291F15]/5 pointer-events-none group-hover:bg-transparent transition-all duration-500" />
@@ -219,6 +221,7 @@ export default function TentangKamiPage() {
                 src="/gallery/perlengakapan.webp"
                 alt="Perlengkapan Umroh Resmi Kiswah"
                 fill
+                quality={65}
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -230,6 +233,7 @@ export default function TentangKamiPage() {
                 src="/gallery/ruang_tunggu.webp"
                 alt="Ruang Tunggu Pelayanan Jamaah Kiswah"
                 fill
+                quality={75}
                 sizes="(max-width: 768px) 100vw, 20vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

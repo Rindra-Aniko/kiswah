@@ -4,6 +4,10 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.18.241'],
   images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,23 +15,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'upload.wikimedia.org',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.civitatis.com',
-      },
-      {
-        protocol: 'https',
         hostname: 'images.pexels.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.pexels.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'pexels.com',
       },
       {
         protocol: 'https',

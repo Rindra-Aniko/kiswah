@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Nova_Square, Freehand } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar.Components";
@@ -11,18 +11,21 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const novaSquare = Nova_Square({
   variable: "--font-nova-square",
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
 });
 
 const freehand = Freehand({
   variable: "--font-freehand",
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -54,6 +57,12 @@ export const metadata: Metadata = {
     description: "Layanan Umrah dan Haji Khusus eksklusif serta terpercaya dengan bimbingan ibadah yang sesuai sunnah dan fasilitas hotel bintang terbaik di Makkah & Madinah.",
     images: ["/image/logo.webp"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#2a1d12",
 };
 
 export default function RootLayout({

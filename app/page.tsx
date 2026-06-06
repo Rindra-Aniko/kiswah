@@ -50,6 +50,7 @@ export default function BerandaPage() {
         alt="Hero Background"
         fill
         priority
+        quality={75}
         sizes="100vw"
         className="object-cover object-center select-none pointer-events-none z-0"
       />
@@ -177,6 +178,7 @@ export default function BerandaPage() {
             src="/image/pelayanan.webp"
             alt="Pelayanan Background"
             fill
+            quality={75}
             sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover object-center select-none pointer-events-none z-0"
           />
