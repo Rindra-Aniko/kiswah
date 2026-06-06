@@ -28,19 +28,26 @@ export default async function JadwalPage() {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative w-full min-h-[60vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/image/pelayanan.webp')" }}
+        className="relative w-full min-h-[60vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center overflow-hidden"
       >
+        <Image
+          src="/image/pelayanan.webp"
+          alt="Baitullah Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center select-none pointer-events-none z-0"
+        />
         {/* Background Image with Masking Overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-10">
           {/* Gradient Mask: Fades from White (left) to transparent (right) to keep text readable */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 sm:via-white/70 to-white/10 md:to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
           <div className="max-w-2xl">
             {/* Konten Teks Tagline */}
-            <div className="flex flex-col justify-center text-left space-y-4 md:space-y-5" data-aos="fade-right">
+            <div className="flex flex-col justify-center text-left space-y-4 md:space-y-5">
               <h1 className="leading-tight tracking-normal text-[#291F15] flex flex-col">
                 <span className="font-nova font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] uppercase tracking-wide mb-1 text-[#B48421]">
                   WUJUDKAN KE-RINDUANMU

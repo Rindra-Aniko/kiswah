@@ -66,7 +66,6 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased`}
       >
-        <AOSInit />
         <NextTopLoader 
           color="#B48421"
           initialPosition={0.08}
@@ -82,6 +81,7 @@ export default function RootLayout({
         {children}
         <WhatsAppFloat />
         <Footer />
+        <AOSInit />
       </body>
     </html>
   );

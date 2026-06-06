@@ -41,18 +41,25 @@ export default function TentangKamiPage() {
   return (
     <div>
       {/* 1. Philosophy Section: Pesan Utama */}
-      <section 
-        className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat relative"
-        style={{ backgroundImage: "url('/image/pelayanan.webp')" }}
+      <section
+        className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden relative"
       >
-        <div className="absolute inset-0 bg-[#FFFFFF]/90 z-0" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6 md:space-y-8" data-aos="fade-up">
+        <Image
+          src="/image/pelayanan.webp"
+          alt="Pelayanan Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center select-none pointer-events-none z-0"
+        />
+        <div className="absolute inset-0 bg-[#FFFFFF]/90 z-10" />
+        <div className="relative z-20 max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#291F15] leading-tight tracking-tight max-w-3xl mx-auto drop-shadow-sm">
             Pengalaman Panjang yang Mengerti Setiap Kebutuhan Langkah Suci Anda
           </h2>
           <div className="w-16 h-[3px] bg-[#BD8A15] mx-auto rounded-full opacity-80" />
           <p className="font-poppins font-normal text-sm sm:text-base md:text-lg text-[#291F15]/90 leading-relaxed max-w-2xl mx-auto tracking-normal">
-            Lebih dari sekadar agen travel, sejarah panjang kami adalah bukti komitmen tanpa henti 
+            Lebih dari sekadar agen travel, sejarah panjang kami adalah bukti komitmen tanpa henti
             untuk selalu menghadirkan pelayanan Umroh yang aman, nyaman, dan penuh berkah.
           </p>
         </div>
@@ -61,36 +68,35 @@ export default function TentangKamiPage() {
       {/* 2. About Us: Sejarah & PPIU */}
       <section className="w-full bg-transparent py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
-          <h2 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl text-[#B48421] tracking-wide text-center mb-10 md:mb-14" data-aos="fade-up">
+          <h2 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl text-[#B48421] tracking-wide text-center mb-10 md:mb-14">
             About US
           </h2>
 
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 items-center mb-12 md:mb-16">
-            <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-start" data-aos="fade-right">
+            <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-[#BD8A15]/30 shadow-lg max-h-[45vh]">
-                <Image 
-                  src="/image/melepas_jemaah.webp" 
+                <Image
+                  src="/image/melepas_jemaah.webp"
                   alt="Tim Pelayanan Kiswah Tour & Travel"
-                  fill 
-                  priority
+                  fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
               </div>
             </div>
 
-            <div className="col-span-1 lg:col-span-7 flex flex-col justify-center space-y-4 text-center lg:text-left" data-aos="fade-left">
+            <div className="col-span-1 lg:col-span-7 flex flex-col justify-center space-y-4 text-center lg:text-left">
               <p className="font-poppins font-normal text-sm sm:text-base text-[#291F15]/90 leading-relaxed max-w-xl">
-                Mulai merintis sejak tahun 2017 dalam mengantarkan jemaah ke Makkah dan Madinah, 
-                Kiswah Al Mabrur Indonesia resmi berdiri pada 13 Maret 2025 sebagai penyedia layanan 
-                tour & travel umrah, haji khusus, dan wisata religi. Dengan komitmen pada pelayanan terbaik, 
-                kami bersyukur terus mendapatkan kepercayaan luas dari masyarakat, menjadikan kami terus 
+                Mulai merintis sejak tahun 2017 dalam mengantarkan jemaah ke Makkah dan Madinah,
+                Kiswah Al Mabrur Indonesia resmi berdiri pada 13 Maret 2025 sebagai penyedia layanan
+                tour & travel umrah, haji khusus, and wisata religi. Dengan komitmen pada pelayanan terbaik,
+                kami bersyukur terus mendapatkan kepercayaan luas dari masyarakat, menjadikan kami terus
                 berkembang dan secara konsisten melayani keberangkatan jemaah tanpa henti.
               </p>
             </div>
           </div>
 
-          <div className="w-full max-w-[340px] sm:max-w-[480px] md:max-w-[580px] border-2 border-[#B48421] rounded-2xl md:rounded-3xl py-3 px-6 md:py-4 md:px-8 text-center transition-all duration-300 hover:bg-[#B48421]/5" data-aos="zoom-in">
+          <div className="w-full max-w-[340px] sm:max-w-[480px] md:max-w-[580px] border-2 border-[#B48421] rounded-2xl md:rounded-3xl py-3 px-6 md:py-4 md:px-8 text-center transition-all duration-300 hover:bg-[#B48421]/5">
             <p className="font-poppins font-medium text-base sm:text-lg md:text-xl text-[#B48421] tracking-wider uppercase">
               PPIU : <span className="font-bold tracking-normal ml-1">12123300499690003</span>
             </p>
@@ -112,30 +118,30 @@ export default function TentangKamiPage() {
               </p>
             </div>
 
-          {/* Grid Layout 3 Kolom (Sejajar di Mobile & Desktop) */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-10 md:gap-14 lg:gap-10 w-full max-w-5xl justify-center mx-auto">
-            {professionalTeam.map((member, index) => (
-              <div key={member.id} className="flex flex-col items-center text-center space-y-2 sm:space-y-4 lg:space-y-3 group" data-aos="zoom-in" data-aos-delay={index * 150}>
-                <div className="relative w-20 h-20 sm:w-48 sm:h-48 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-[#BD8A15]/20 shadow-md transition-all duration-500 group-hover:border-[#BD8A15]/60 group-hover:shadow-lg">
-                  <Image 
-                    src={member.imageSrc} 
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 640px) 80px, (max-width: 1024px) 200px, 160px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            {/* Grid Layout 3 Kolom (Sejajar di Mobile & Desktop) */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-10 md:gap-14 lg:gap-10 w-full max-w-5xl justify-center mx-auto">
+              {professionalTeam.map((member, index) => (
+                <div key={member.id} className="flex flex-col items-center text-center space-y-2 sm:space-y-4 lg:space-y-3 group" data-aos="zoom-in" data-aos-delay={index * 150}>
+                  <div className="relative w-20 h-20 sm:w-48 sm:h-48 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-[#BD8A15]/20 shadow-md transition-all duration-500 group-hover:border-[#BD8A15]/60 group-hover:shadow-lg">
+                    <Image
+                      src={member.imageSrc}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 640px) 80px, (max-width: 1024px) 200px, 160px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="space-y-0.5">
+                    <h3 className="font-poppins font-semibold text-[8px] sm:text-lg lg:text-base text-[#B48421] leading-tight px-1 tracking-tighter sm:tracking-tight">
+                      {member.name}
+                    </h3>
+                    <p className="font-poppins font-medium text-[9px] sm:text-base lg:text-sm text-[#291F15] leading-tight">
+                      {member.role}
+                    </p>
+                  </div>
                 </div>
-                <div className="space-y-0.5">
-                  <h3 className="font-poppins font-semibold text-[8px] sm:text-lg lg:text-base text-[#B48421] leading-tight px-1 tracking-tighter sm:tracking-tight">
-                    {member.name}
-                  </h3>
-                  <p className="font-poppins font-medium text-[9px] sm:text-base lg:text-sm text-[#291F15] leading-tight">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
 
           {/* Staf Management */}
@@ -146,27 +152,27 @@ export default function TentangKamiPage() {
               </h2>
             </div>
 
-          {/* Grid Layout Sejajar (2 Kolom di Mobile, 4 Kolom di Desktop) */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-5xl justify-center mx-auto">
-            {managementStaff.map((member) => (
-              <div key={member.id} className="flex flex-col items-center text-center space-y-2 lg:space-y-3 group relative">
-                <div className="relative w-24 h-24 sm:w-44 sm:h-44 lg:w-32 lg:h-32 rounded-full overflow-hidden border-2 border-[#BD8A15]/20 shadow-sm transition-all duration-500 group-hover:border-[#BD8A15]/60 group-hover:shadow-md">
-                  <Image 
-                    src={member.imageSrc} 
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 640px) 100px, (max-width: 1024px) 180px, 128px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            {/* Grid Layout Sejajar (2 Kolom di Mobile, 4 Kolom di Desktop) */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-5xl justify-center mx-auto">
+              {managementStaff.map((member) => (
+                <div key={member.id} className="flex flex-col items-center text-center space-y-2 lg:space-y-3 group relative">
+                  <div className="relative w-24 h-24 sm:w-44 sm:h-44 lg:w-32 lg:h-32 rounded-full overflow-hidden border-2 border-[#BD8A15]/20 shadow-sm transition-all duration-500 group-hover:border-[#BD8A15]/60 group-hover:shadow-md">
+                    <Image
+                      src={member.imageSrc}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 640px) 100px, (max-width: 1024px) 180px, 128px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-poppins font-semibold text-[10px] sm:text-base lg:text-xs text-[#B48421] leading-tight px-1 tracking-tight">
+                      {member.name}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-poppins font-semibold text-[10px] sm:text-base lg:text-xs text-[#B48421] leading-tight px-1 tracking-tight">
-                    {member.name}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -186,8 +192,8 @@ export default function TentangKamiPage() {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6 lg:gap-8 auto-rows-[220px] sm:auto-rows-[260px] md:auto-rows-[280px]">
             <div className="md:col-span-5 md:row-span-1 group relative rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm transition-all duration-500 hover:border-[#BD8A15]/60 hover:shadow-md">
-              <Image 
-                src="/gallery/kantor.webp" 
+              <Image
+                src="/gallery/kantor.webp"
                 alt="Kantor Pusat Kiswah Umrah Maqbul"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -197,20 +203,20 @@ export default function TentangKamiPage() {
             </div>
 
             <div className="md:col-span-7 md:row-span-2 group relative rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm transition-all duration-500 hover:border-[#BD8A15]/60 hover:shadow-md">
-              <Image 
-                src="/gallery/ruang_bos.webp" 
+              <Image
+                src="/gallery/ruang_bos.webp"
                 alt="Ruang Resepsionis Utama Kiswah Tour & Travel"
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
-                priority 
+                priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-[#291F15]/5 pointer-events-none group-hover:bg-transparent transition-all duration-500" />
             </div>
 
             <div className="md:col-span-3 md:row-span-1 group relative rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm transition-all duration-500 hover:border-[#BD8A15]/60 hover:shadow-md">
-              <Image 
-                src="/gallery/perlengakapan.webp" 
+              <Image
+                src="/gallery/perlengakapan.webp"
                 alt="Perlengkapan Umroh Resmi Kiswah"
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
@@ -220,8 +226,8 @@ export default function TentangKamiPage() {
             </div>
 
             <div className="md:col-span-2 md:row-span-1 group relative rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm transition-all duration-500 hover:border-[#BD8A15]/60 hover:shadow-md">
-              <Image 
-                src="/gallery/ruang_tunggu.webp" 
+              <Image
+                src="/gallery/ruang_tunggu.webp"
                 alt="Ruang Tunggu Pelayanan Jamaah Kiswah"
                 fill
                 sizes="(max-width: 768px) 100vw, 20vw"
@@ -232,7 +238,7 @@ export default function TentangKamiPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Contact Information Section */}
       <section className="w-full bg-transparent py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +276,7 @@ export default function TentangKamiPage() {
                   <div className="space-y-1 font-poppins text-[#291F15]">
                     <h4 className="font-bold text-base">Hubungi Kami</h4>
                     <p className="text-sm text-[#291F15]/80">
-                      +62 851-6373-1467 <br />
+                      +62 87739832387<br />
                     </p>
                   </div>
                 </div>
@@ -302,9 +308,9 @@ export default function TentangKamiPage() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#BD8A15]/10">
-                <a 
-                  href="https://wa.me/6287739832387" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/6287739832387"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-poppins font-medium text-sm text-white bg-[#B48421] hover:bg-[#BD8A15] transition-all duration-300 shadow-sm active:scale-98"
                 >

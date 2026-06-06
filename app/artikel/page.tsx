@@ -85,11 +85,18 @@ export default async function ArtikelPage({
     <div className="min-h-screen bg-gray-50 font-poppins pb-20">
       {/* Header Section */}
       <div 
-        className="relative py-24 px-4 bg-fixed bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/image/melepas_jemaah.webp')" }}
+        className="relative py-24 px-4 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[#291F15]/85 mix-blend-multiply z-0" />
-        <div className="relative z-10 max-w-7xl mx-auto text-center" data-aos="zoom-in">
+        <Image
+          src="/image/melepas_jemaah.webp"
+          alt="Info Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center select-none pointer-events-none z-0"
+        />
+        <div className="absolute inset-0 bg-[#291F15]/85 mix-blend-multiply z-10" />
+        <div className="relative z-20 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Wawasan & Berita</h1>
           <p className="text-amber-100/90 max-w-2xl mx-auto text-lg">
             Temukan informasi terbaru seputar layanan Umroh, Haji, dan tips perjalanan ibadah dari Kiswah.id
@@ -131,7 +138,6 @@ export default async function ArtikelPage({
                     src={article.featuredImage} 
                     alt={article.title}
                     fill
-                    priority={index < 3}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />

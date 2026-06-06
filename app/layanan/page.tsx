@@ -125,28 +125,43 @@ export default function LayananPage() {
   return (
     <div>
       <section 
-        className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden pt-1 pb-8 bg-fixed bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/image/hero.webp')" }}
+        className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden pt-1 pb-8"
       >
+      <Image
+        src="/image/hero.webp"
+        alt="Hero Background"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center select-none pointer-events-none z-0"
+      />
       {/* Overlay Putih untuk kesan bersih dan elegan sekaligus masking opacity */}
-      <div className="absolute inset-0 bg-white/80 z-0" />
+      <div className="absolute inset-0 bg-white/80 z-10" />
 
       {/* Container Utama dengan Grid Responsif */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center z-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center z-20">
         
         {/* Kolom Kiri: Slot Visual Gambar Jamaah & Koper */}
-        <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-start order-last lg:order-first mt-8 lg:mt-0" data-aos="fade-right">
+        <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-start order-last lg:order-first mt-8 lg:mt-0">
           <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] aspect-[4/5] flex items-center justify-center">
             {/* Efek Soft Blur Glow di Latar Belakang agar Premium */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#BD8A15]/10 to-transparent blur-3xl rounded-full scale-75 -z-10 transition-all duration-750 hover:from-[#BD8A15]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#BD8A15]/10 to-transparent blur-3xl rounded-full scale-75 z-0 transition-all duration-750 hover:from-[#BD8A15]/20" />
             
             {/* SILAHKAN GANTI src BERIKUT DENGAN PATH FOTO JAMAAH ANDA */}
-            <div className="w-full h-full bg-contain bg-center bg-no-repeat mt-12 transform scale-100 hover:scale-105 transition-transform duration-700 max-h-[50vh] md:max-h-[75vh]" style={{ backgroundImage: "url('/image/girl_tu.webp')" }}></div>
+            <div className="relative w-full h-full mt-12 transform scale-100 hover:scale-105 transition-transform duration-700 max-h-[50vh] md:max-h-[75vh] z-10">
+              <Image
+                src="/image/girl_tu.webp"
+                alt="Jamaah Kiswah"
+                fill
+                sizes="(max-width: 1024px) 100vw, 450px"
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
 
         {/* Kolom Kanan: Teks Tagline */}
-        <div className="col-span-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-6" data-aos="fade-left">
+        <div className="col-span-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left space-y-4 md:space-y-6">
           <h1 className="flex flex-col md:block leading-tight tracking-normal text-[#291F15]">
             {/* Baris Pertama: Kenyamanan Anda Beribadah (Menggunakan Font Poppins Bold/Semi-Bold) */}
             <span className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.25rem] uppercase block mb-1 md:mb-2">
@@ -243,7 +258,6 @@ export default function LayananPage() {
                 src="/image/haji_khusus.webp" 
                 alt="Jemaah Haji Khusus Kiswah Travel" 
                 fill
-                priority
                 sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
               />
@@ -325,10 +339,9 @@ export default function LayananPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                 <Image 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg" 
+                  src="/image/mesir.jpg" 
                   alt="Tour Muslim Mesir Piramida Kiswah Travel" 
                   fill
-                  priority
                   sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                 />
@@ -368,10 +381,9 @@ export default function LayananPage() {
             <div className="lg:col-span-5 relative order-first lg:order-last">
               <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                 <Image 
-                  src="https://www.civitatis.com/blog/wp-content/uploads/2020/05/estambul-un-dia.jpg" 
+                  src="/image/istanbul.jpg" 
                   alt="Tour Muslim Istanbul Turki Kiswah Travel" 
                   fill
-                  priority
                   sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                 />

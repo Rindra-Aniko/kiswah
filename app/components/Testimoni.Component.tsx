@@ -57,9 +57,11 @@ export default function TestimonialCarousel() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Update items to show based on window size
   useEffect(() => {
+    setIsMounted(true);
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setItemsToShow(1);
@@ -87,11 +89,12 @@ export default function TestimonialCarousel() {
 
   // Auto play
   useEffect(() => {
+    if (!isMounted) return;
     const interval = setInterval(() => {
       handleNext();
     }, 5000);
     return () => clearInterval(interval);
-  }, [handleNext]);
+  }, [handleNext, isMounted]);
 
   return (
     <section className="w-full bg-[#fdfcfb] py-20 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden relative">
@@ -120,27 +123,28 @@ export default function TestimonialCarousel() {
         <div className="relative group">
           
           {/* Navigasi Kiri */}
-          <button 
-            onClick={handlePrev}
-            className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
-            aria-label="Previous Slide"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+          {isMounted && (
+            <button 
+              onClick={handlePrev}
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
+              aria-label="Previous Slide"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
 
           {/* Masking Viewport */}
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
-              style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
+              className="[--items-to-show:1] md:[--items-to-show:2] lg:[--items-to-show:3] flex transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+              style={{ transform: `translateX(calc(-1 * ${currentIndex} * 100% / var(--items-to-show)))` } as React.CSSProperties}
             >
               {testimonials.map((item) => (
                 <div 
                   key={item.id} 
-                  className={`flex-shrink-0 px-3 transition-all duration-500`}
-                  style={{ width: `${100 / itemsToShow}%` }}
+                  className="w-[calc(100%/var(--items-to-show))] flex-shrink-0 px-3 transition-all duration-500"
                 >
                   <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-100 flex flex-col h-[380px] relative hover:shadow-[0_20px_50px_-12px_rgba(180,132,33,0.15)] transition-all duration-500 transform hover:-translate-y-2 group/card">
                     
@@ -191,31 +195,35 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Navigasi Kanan */}
-          <button 
-            onClick={handleNext}
-            className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
-            aria-label="Next Slide"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          {isMounted && (
+            <button 
+              onClick={handleNext}
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
+              aria-label="Next Slide"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
 
         </div>
 
         {/* Indicators */}
-        <div className="flex justify-center space-x-3 mt-12">
-          {[...Array(maxIndex + 1)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2 rounded-full transition-all duration-500 ${
-                currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        {isMounted && (
+          <div className="flex justify-center space-x-3 mt-12">
+            {[...Array(maxIndex + 1)].map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
 
       </div>
     </section>

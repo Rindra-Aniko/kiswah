@@ -18,7 +18,6 @@ export default function Footer() {
                 fill
                 sizes="56px"
                 className="object-contain"
-                priority
               />
             </div>
             <div>
@@ -47,7 +46,7 @@ export default function Footer() {
             <Link href="/jadwal" className="hover:text-[#B48421] transition-colors duration-200">
               Jadwal
             </Link>
-            <Link href="/info-artikel" className="hover:text-[#B48421] transition-colors duration-200">
+            <Link href="/artikel" className="hover:text-[#B48421] transition-colors duration-200">
               Info & Artikel
             </Link>
             <Link href="/tentang-kami" className="hover:text-[#B48421] transition-colors duration-200">
