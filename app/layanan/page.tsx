@@ -133,8 +133,7 @@ export default function LayananPage() {
         alt="Hero Background"
         fill
         priority
-        quality={75}
-        sizes="(max-width: 768px) 480px, 100vw"
+        unoptimized
         className="object-cover object-center select-none pointer-events-none z-0"
       />
       {/* Overlay Putih untuk kesan bersih dan elegan sekaligus masking opacity */}
