@@ -9,7 +9,6 @@ import ArticleFilters from './ArticleFilters';
 import { Metadata } from 'next';
 import ScrollReveal from '../components/ScrollReveal';
 
-export const runtime = 'edge';
 
 export const metadata: Metadata = {
   title: "Info & Artikel Religi",

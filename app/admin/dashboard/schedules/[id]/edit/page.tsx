@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { HiArrowLeft } from 'react-icons/hi';
 import EditScheduleForm from './EditScheduleForm';
 
-export const runtime = 'edge';
 
 export default async function EditSchedulePage({ params }: { params: Promise<{ id: string }> }) {
   const session = await getSession();

@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { HiPlus, HiArrowLeft } from 'react-icons/hi';
 import ScheduleList from './ScheduleList';
 
-export const runtime = 'edge';
 
 export default async function SchedulesDashboardPage() {
   const session = await getSession();

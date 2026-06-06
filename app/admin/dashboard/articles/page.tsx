@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { HiPlus, HiPencil, HiTrash, HiEye, HiArrowLeft } from 'react-icons/hi';
 import ArticleList from './ArticleList';
 
-export const runtime = 'edge';
 
 export default async function ArticlesDashboardPage() {
   const session = await getSession();

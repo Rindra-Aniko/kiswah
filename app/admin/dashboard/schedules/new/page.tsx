@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { HiArrowLeft } from 'react-icons/hi';
 import CreateScheduleForm from './CreateScheduleForm';
 
-export const runtime = 'edge';
 
 export default async function NewSchedulePage() {
   const session = await getSession();

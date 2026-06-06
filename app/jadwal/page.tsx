@@ -8,7 +8,6 @@ import { Metadata } from 'next';
 import ScrollReveal from '../components/ScrollReveal';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'edge';
 
 export const metadata: Metadata = {
   title: "Jadwal Keberangkatan & Sisa Kuota",

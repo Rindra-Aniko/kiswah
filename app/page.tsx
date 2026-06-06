@@ -51,7 +51,8 @@ export default function BerandaPage() {
         alt="Hero Background"
         fill
         priority
-        unoptimized
+        quality={75}
+        sizes="(max-width: 768px) 480px, 100vw"
         className="object-cover object-center select-none pointer-events-none z-0"
       />
       {/* Overlay Putih untuk kesan bersih dan elegan */}

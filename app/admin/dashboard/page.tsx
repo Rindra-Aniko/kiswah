@@ -7,7 +7,6 @@ import { logoutAction } from '@/lib/actions/auth';
 import { HiLogout, HiBookOpen, HiUsers, HiCalendar } from 'react-icons/hi';
 import Link from 'next/link';
 
-export const runtime = 'edge';
 
 export default async function AdminDashboardPage() {
   const session = await getSession();

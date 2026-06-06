@@ -9,7 +9,6 @@ import { HiArrowLeft, HiCalendar, HiUser, HiPencil } from 'react-icons/hi';
 import { getSession } from '@/lib/auth';
 import { Metadata } from 'next';
 
-export const runtime = 'edge';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
