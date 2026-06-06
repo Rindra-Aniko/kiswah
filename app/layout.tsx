@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     description: "Layanan Umrah dan Haji Khusus eksklusif serta terpercaya dengan bimbingan ibadah yang sesuai sunnah dan fasilitas hotel bintang terbaik di Makkah & Madinah.",
     images: ["/image/logo.webp"],
   },
+  verification: {
+    google: "google3a40c5b38cc74195",
+  },
 };
 
 export const viewport: Viewport = {
