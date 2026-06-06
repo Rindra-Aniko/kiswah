@@ -134,7 +134,7 @@ export default function LayananPage() {
         fill
         priority
         quality={75}
-        sizes="100vw"
+        sizes="(max-width: 768px) 480px, 100vw"
         className="object-cover object-center select-none pointer-events-none z-0"
       />
       {/* Overlay Putih untuk kesan bersih dan elegan sekaligus masking opacity */}
@@ -155,6 +155,7 @@ export default function LayananPage() {
                 src="/image/girl_tu.webp"
                 alt="Jamaah Kiswah"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-contain"
               />

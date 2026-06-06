@@ -52,7 +52,7 @@ export default function BerandaPage() {
         fill
         priority
         quality={75}
-        sizes="100vw"
+        sizes="(max-width: 768px) 480px, 100vw"
         className="object-cover object-center select-none pointer-events-none z-0"
       />
       {/* Overlay Putih untuk kesan bersih dan elegan */}

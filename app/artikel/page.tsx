@@ -94,7 +94,7 @@ export default async function ArtikelPage({
           fill
           priority
           quality={75}
-          sizes="100vw"
+          sizes="(max-width: 768px) 480px, 100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
         <div className="absolute inset-0 bg-[#291F15]/85 mix-blend-multiply z-10" />

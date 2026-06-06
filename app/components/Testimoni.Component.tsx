@@ -210,20 +210,18 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Indicators */}
-        {isMounted && (
-          <div className="flex justify-center space-x-3 mt-12">
-            {[...Array(maxIndex + 1)].map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
+        <div className="flex justify-center space-x-3 mt-12 min-h-[8px]">
+          {isMounted && [...Array(maxIndex + 1)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2 rounded-full transition-all duration-500 ${
+                currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
 
       </div>
     </section>

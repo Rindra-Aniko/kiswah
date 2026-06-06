@@ -79,7 +79,7 @@ export default async function PublicArticlePage({ params }: { params: Promise<{ 
             alt={article.title}
             fill
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 480px, 100vw"
             className="object-cover opacity-60"
           />
         ) : (

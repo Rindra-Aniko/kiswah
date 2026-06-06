@@ -51,7 +51,7 @@ export default function TentangKamiPage() {
           fill
           priority
           quality={75}
-          sizes="100vw"
+          sizes="(max-width: 768px) 480px, 100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
         <div className="absolute inset-0 bg-[#FFFFFF]/90 z-10" />
