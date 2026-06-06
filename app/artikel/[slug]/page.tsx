@@ -79,7 +79,7 @@ export default async function PublicArticlePage({ params }: { params: Promise<{ 
             fill
             priority
             fetchPriority="high"
-            sizes="(max-width: 768px) 480px, 100vw"
+            sizes="100vw"
             className="object-cover opacity-60"
           />
         ) : (

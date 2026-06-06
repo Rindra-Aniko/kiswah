@@ -5,6 +5,7 @@ import { eq, desc, and, like, count, sql } from 'drizzle-orm';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HiCalendar, HiArrowRight, HiChevronLeft, HiChevronRight, HiSearch } from 'react-icons/hi';
+import hajiKhususImg from '@/public/image/haji_khusus.webp';
 import ArticleFilters from './ArticleFilters';
 import { Metadata } from 'next';
 import ScrollReveal from '../components/ScrollReveal';
@@ -88,13 +89,13 @@ export default async function ArtikelPage({
         className="relative py-24 px-4 overflow-hidden"
       >
         <Image
-          src="/image/haji_khusus.webp"
+          src={hajiKhususImg}
           alt="Info Background"
           fill
           priority
           fetchPriority="high"
-          quality={75}
-          sizes="(max-width: 768px) 480px, 100vw"
+          placeholder="blur"
+          sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
         <div className="absolute inset-0 bg-[#291F15]/85 mix-blend-multiply z-10" />

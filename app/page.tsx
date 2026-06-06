@@ -3,6 +3,8 @@ import TestimoniCarousel from "./components/Testimoni.Component";
 import ScrollReveal from "./components/ScrollReveal";
 import Link from "next/link";
 import Image from "next/image";
+import heroImg from "@/public/image/hero.webp";
+import pelayananImg from "@/public/image/pelayanan.webp";
 
 export default function BerandaPage() {
   const featureList = [
@@ -47,13 +49,13 @@ export default function BerandaPage() {
       className="relative w-full min-h-[600px] md:min-h-[90vh] flex items-center overflow-hidden py-16 px-4 sm:px-8 md:px-16 lg:px-24"
     >
       <Image
-        src="/image/hero.webp"
+        src={heroImg}
         alt="Hero Background"
         fill
         priority
         fetchPriority="high"
-        quality={75}
-        sizes="(max-width: 768px) 480px, 30vw"
+        placeholder="blur"
+        sizes="100vw"
         className="object-cover object-center select-none pointer-events-none z-0"
       />
       {/* Overlay Putih untuk kesan bersih dan elegan */}
@@ -181,10 +183,11 @@ export default function BerandaPage() {
       <section className="w-full bg-transparent py-12 px-4 sm:px-8 md:px-16 lg:px-24">
         <div className="max-w-5xl mx-auto rounded-[24px] sm:rounded-[32px] px-6 py-12 sm:py-16 md:py-20 text-center shadow-xl relative overflow-hidden">
           <Image
-            src="/image/pelayanan.webp"
+            src={pelayananImg}
             alt="Pelayanan Background"
             fill
             quality={75}
+            placeholder="blur"
             sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover object-center select-none pointer-events-none z-0"
           />

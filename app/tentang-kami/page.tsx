@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
+import pelayananImg from '@/public/image/pelayanan.webp';
+import melepasJemaahImg from '@/public/image/melepas_jemaah.webp';
 import { Metadata } from 'next';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -46,12 +48,13 @@ export default function TentangKamiPage() {
         className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden relative"
       >
         <Image
-          src="/image/pelayanan.webp"
+          src={pelayananImg}
           alt="Pelayanan Background"
           fill
           priority
-          quality={75}
-          sizes="(max-width: 768px) 480px, 100vw"
+          fetchPriority="high"
+          placeholder="blur"
+          sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
         <div className="absolute inset-0 bg-[#FFFFFF]/90 z-10" />
@@ -78,10 +81,11 @@ export default function TentangKamiPage() {
             <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-[#BD8A15]/30 shadow-lg max-h-[45vh]">
                 <Image
-                  src="/image/melepas_jemaah.webp"
+                  src={melepasJemaahImg}
                   alt="Tim Pelayanan Kiswah Tour & Travel"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  placeholder="blur"
+                  sizes="(max-width: 480px) 100vw, 450px"
                   className="object-cover"
                 />
               </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import WhatsAppButton from '../components/WhatsAppButton.Component';
+import pelayananImg from '@/public/image/pelayanan.webp';
 import { db } from '@/lib/db';
 import { schedules } from '@/lib/db/schema';
 import { desc } from 'drizzle-orm';
@@ -31,13 +32,13 @@ export default async function JadwalPage() {
         className="relative w-full min-h-[60vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center overflow-hidden"
       >
         <Image
-          src="/image/pelayanan.webp"
+          src={pelayananImg}
           alt="Baitullah Background"
           fill
           priority
           fetchPriority="high"
-          quality={75}
-          sizes="(max-width: 768px) 480px, 100vw"
+          placeholder="blur"
+          sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
         {/* Background Image with Masking Overlay */}

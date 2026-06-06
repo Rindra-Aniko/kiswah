@@ -3,6 +3,10 @@ import Image from 'next/image';
 import WhatsAppButton from '../components/WhatsAppButton.Component';
 import ScrollReveal from '../components/ScrollReveal';
 import { Metadata } from 'next';
+import girlTuImg from '@/public/image/girl_tu.webp';
+import hajiKhususImg from '@/public/image/haji_khusus.webp';
+import mesirImg from '@/public/image/mesir.jpg';
+import istanbulImg from '@/public/image/istanbul.jpg';
 
 export const metadata: Metadata = {
   title: "Layanan Umrah & Haji",
@@ -141,11 +145,13 @@ export default function LayananPage() {
             {/* SILAHKAN GANTI src BERIKUT DENGAN PATH FOTO JAMAAH ANDA */}
             <div className="relative w-full h-full mt-12 transform scale-100 hover:scale-105 transition-transform duration-700 max-h-[50vh] md:max-h-[75vh] z-10">
               <Image
-                src="/image/girl_tu.webp"
+                src={girlTuImg}
                 alt="Jamaah Kiswah"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 450px"
+                fetchPriority="high"
+                placeholder="blur"
+                sizes="(max-width: 480px) 100vw, 450px"
                 className="object-contain"
               />
             </div>
@@ -255,10 +261,11 @@ export default function LayananPage() {
             
             <div className="relative h-full min-h-[400px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl">
               <Image 
-                src="/image/haji_khusus.webp" 
+                src={hajiKhususImg} 
                 alt="Jemaah Haji Khusus Kiswah Travel" 
                 fill
-                sizes="(max-width: 1024px) 100vw, 500px"
+                placeholder="blur"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                 className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -338,10 +345,11 @@ export default function LayananPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                 <Image 
-                  src="/image/mesir.jpg" 
+                  src={mesirImg} 
                   alt="Tour Muslim Mesir Piramida Kiswah Travel" 
                   fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  placeholder="blur"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                   className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -380,10 +388,11 @@ export default function LayananPage() {
             <div className="lg:col-span-5 relative order-first lg:order-last">
               <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                 <Image 
-                  src="/image/istanbul.jpg" 
+                  src={istanbulImg} 
                   alt="Tour Muslim Istanbul Turki Kiswah Travel" 
                   fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  placeholder="blur"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                   className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
