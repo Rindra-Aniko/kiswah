@@ -92,6 +92,7 @@ export default async function ArtikelPage({
           alt="Info Background"
           fill
           priority
+          fetchPriority="high"
           quality={75}
           sizes="(max-width: 768px) 480px, 100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
