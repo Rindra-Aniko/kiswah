@@ -1,12 +1,15 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin', '/api', '/testing-cache'],
+        disallow: ['/admin', '/api'],
       },
     ],
     sitemap: 'https://kiswah.id/sitemap.xml',
