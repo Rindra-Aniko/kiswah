@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/robots.txt"
-  to = "/robots.txt"
+  to = "/robots_site.txt"
   status = 200
   force = true
 
@@ -9,3 +9,15 @@
   to = "/sitemap.xml"
   status = 200
   force = true
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    Cache-Control = "no-cache, no-store, must-revalidate"
