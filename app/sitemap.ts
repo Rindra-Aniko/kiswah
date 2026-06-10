@@ -32,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly',
+    changeFrequency: route === '' ? 'daily' : 'weekly' as const,
     priority: route === '' ? 1.0 : 0.8,
   }));
 
@@ -40,6 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articleRoutes: MetadataRoute.Sitemap = publishedArticles.map((article) => {
     let lastMod = new Date();
     if (article.updatedAt) {
+      // Convert SQLite 'YYYY-MM-DD HH:MM:SS' to ISO for Date constructor
       const parsedDate = new Date(article.updatedAt.replace(' ', 'T'));
       if (!isNaN(parsedDate.getTime())) {
         lastMod = parsedDate;
@@ -49,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return {
       url: `${baseUrl}/artikel/${article.slug}`,
       lastModified: lastMod,
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.6,
     };
   });
