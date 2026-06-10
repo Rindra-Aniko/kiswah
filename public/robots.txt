@@ -1,7 +1,6 @@
-Sitemap: https://kiswah.id/sitemap.xml
-
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api
-Disallow: /pesan-rahasia-gemini
+
+Sitemap: https://kiswah.id/sitemap.xml
