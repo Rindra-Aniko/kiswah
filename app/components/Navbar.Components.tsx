@@ -56,6 +56,7 @@ const Navbar = () => {
             <Link href="/" className={`text-[15px] transition-colors ${pathname === '/' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Beranda</Link>
             <Link href="/layanan" className={`text-[15px] transition-colors ${pathname === '/layanan' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Layanan</Link>
             <Link href="/jadwal" className={`text-[15px] transition-colors ${pathname === '/jadwal' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Jadwal</Link>
+            <Link href="/panduan-umroh" className={`text-[15px] transition-colors ${pathname === '/panduan-umroh' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Panduan Umroh</Link>
             <Link href="/artikel" className={`text-[15px] transition-colors ${pathname === '/artikel' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Info</Link>
             <Link href="/tentang-kami" className={`text-[15px] transition-colors ${pathname === '/tentang-kami' ? 'text-[#B48421] font-semibold' : 'text-white hover:text-[#B48421]'}`}>Tentang Kami</Link>
           </div>
@@ -107,6 +108,7 @@ const Navbar = () => {
             <Link href="/" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Beranda</Link>
             <Link href="/layanan" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Layanan</Link>
             <Link href="/jadwal" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Jadwal</Link>
+            <Link href="/panduan-umroh" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Panduan Umroh</Link>
             <Link href="/artikel" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Info &amp; Artikel</Link>
             <Link href="/tentang-kami" onClick={() => setIsOpen(false)} className="text-white text-lg border-b border-white/5 pb-3">Tentang Kami</Link>
             
