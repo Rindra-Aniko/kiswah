@@ -4,7 +4,7 @@ import { articles, categories } from '@/lib/db/schema';
 import { eq, desc, and, like, count, sql } from 'drizzle-orm';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HiCalendar, HiArrowRight, HiChevronLeft, HiChevronRight, HiSearch } from 'react-icons/hi';
+import { HiCalendar, HiUser, HiArrowRight, HiChevronLeft, HiChevronRight, HiSearch } from 'react-icons/hi';
 import hajiKhususImg from '@/public/image/haji_khusus.webp';
 import ArticleFilters from './ArticleFilters';
 import { Metadata } from 'next';
@@ -160,9 +160,16 @@ export default async function ArtikelPage({
 
                 {/* Card Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-center gap-2 text-gray-500 text-xs mb-3 font-medium">
-                    <HiCalendar className="w-4 h-4 text-amber-600" />
-                    <span>{formatDate(article.createdAt)}</span>
+                  <div className="flex flex-wrap items-center gap-3 text-gray-500 text-xs mb-3 font-medium">
+                    <div className="flex items-center gap-1">
+                      <HiCalendar className="w-4 h-4 text-amber-600" />
+                      <span>{formatDate(article.createdAt)}</span>
+                    </div>
+                    <span>•</span>
+                    <div className="flex items-center gap-1">
+                      <HiUser className="w-4 h-4 text-amber-600" />
+                      <span>{article.author?.name || 'Admin'}</span>
+                    </div>
                   </div>
                   <h2 className="text-xl font-bold text-[#291F15] group-hover:text-amber-800 transition-colors line-clamp-2 mb-3 leading-tight">
                     {article.title}
