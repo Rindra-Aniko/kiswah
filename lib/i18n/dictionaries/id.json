@@ -1,0 +1,272 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "schedule": "Jadwal",
+    "umrahGuide": "Panduan Umroh",
+    "info": "Info & Artikel",
+    "about": "Tentang Kami",
+    "register": "DAFTAR",
+    "registerAgent": "DAFTAR AGENT"
+  },
+  "footer": {
+    "tagline": "Travel umroh terpercaya dengan pelayanan maksimal, Pembimbing Berpengalaman dengan Fasilitas terbaik.",
+    "addressTitle": "ALAMAT :",
+    "addressText": "Desa Air Bersih, Kecamatan Air Hangat Barat, Kabupaten Kerinci, Provinsi Jambi",
+    "postalCode": "Kode Pos :",
+    "copyright": "© 2026 Copyright Kiswah Tour & Travel",
+    "createdBy": "Create By"
+  },
+  "cta": {
+    "registerWhatsapp": "Assalamu'alaikum Kiswah Tour & Travel, saya ingin mendaftar untuk layanan umrah...",
+    "agentWhatsapp": "Assalamu'alaikum Kiswah Tour & Travel, saya berminat untuk mendaftar menjadi agen...",
+    "waFloatTooltip": "Butuh bantuan? Konsultasi gratis via WhatsApp kami 😊",
+    "waFloatMsg": "Assalamu'alaikum Kiswah Tour & Travel, saya ingin bertanya mengenai layanan umrah..."
+  },
+  "language": {
+    "id": "Indonesia",
+    "en": "English",
+    "select": "Pilih Bahasa"
+  },
+  "home": {
+    "heroServices": "Umrah - Haji Khusus - Muslim Tour",
+    "specialService": "PELAYANAN SPESIAL",
+    "freeTour": "GRATIS TOUR",
+    "taifBadar": "Ta'if & Badar",
+    "whySpecialTitle": "Kenapa ini",
+    "whySpecialSubtitle": "spesial ?",
+    "f1Title": "Manasik Private Gratis",
+    "f1Desc": "Nikmati 2 sesi manasik privat tanpa biaya tambahan, sebagai pendamping manasik bersama, guna mempersiapkan ibadah Umroh secara lebih optimal sebelum keberangkatan.",
+    "f2Title": "Koper Langsung Tiba di Kamar Hotel",
+    "f2Desc": "Nikmati layanan eksklusif tanpa perlu mengurus koper saat keberangkatan. Kami akan memastikan koper jamaah langsung tersedia di kamar hotel, sehingga fokus untuk beribadah dengan tenang dan khusyuk.",
+    "f3Title": "Lokasi Hotel Dekat Dengan Tempat Ibadah",
+    "f3Desc": "Hotel yang kami pilih berada di lokasi premium, dengan akses sekitar 5–7 menit berjalan kaki ke Masjidil Haram di Makkah dan Masjid Nabawi di Madinah.",
+    "f4Title": "Gratis Tour Plus ke Taif dan Badar",
+    "f4Desc": "Selain melaksanakan ibadah umrah, jemaah akan mendapatkan kesempatan mengikuti wisata religi ke Thaif, dan Jabal Nur.",
+    "f5Title": "Jumlah Umroh 3 Kali",
+    "f5Desc": "Dapatkan kesempatan 3x Umroh dalam satu perjalanan! Wujudkan niat tulus menghadiahkan pahala ibadah Umroh untuk orang tua dan keluarga tercinta.",
+    "f6Title": "Mutawwif Handal dan Berpengalaman",
+    "f6Desc": "Mutawwif kami lebih dari sekadar pembimbing ibadah; mereka adalah pendamping terverifikasi yang peka secara sosial. Kami memastikan bahwa ibadah Anda tidak hanya terarah dengan benar, namun Anda juga memastikan jamaah merasa nyaman.",
+    "checkPackagesBtn": "LIHAT PAKET UMROH YANG TERSEDIA",
+    "ctaHeading1": "Ingin ke Tanah Suci, tanpa perlu ribet?",
+    "ctaHeading2": "Amankan kuota Anda bulan ini !",
+    "checkQuotaBtnLine1": "CEK KUOTA DAN",
+    "checkQuotaBtnLine2": "JADWAL"
+  },
+  "testimoni": {
+    "badge": "Testimoni Jemaah",
+    "title": "Profesional & Berpengalaman",
+    "descPart1": "Sejak tahun 2017, kami telah dipercaya mendampingi lebih dari ",
+    "descHighlight": "4.500 jemaah",
+    "descPart2": " dalam perjalanan suci mereka.",
+    "list": [
+      {
+        "id": 1,
+        "name": "Bapak Ahmad Subagja",
+        "profession": "Pengusaha - Jambi",
+        "review": "Pelayanan dari Kiswah Tour & Travel sangat luar biasa. Sejak manasik privat hingga koper yang diurus langsung sampai di depan kamar hotel, semuanya membuat ibadah kami sekeluarga menjadi sangat khusyuk tanpa beban pikiran."
+      },
+      {
+        "id": 2,
+        "name": "Ibu Siti Rahma",
+        "profession": "PNS - Kerinci",
+        "review": "Sangat bersyukur memilih travel ini. Lokasi hotelnya benar-benar dekat dengan Masjidil Haram, hanya jalan kaki beberapa menit saja. Pembimbing ibadah (Mutawwif) juga sangat sabar dan handal mendampingi kami selama 3 kali umroh."
+      },
+      {
+        "id": 3,
+        "name": "H. Dr. Faisal Azhari",
+        "profession": "Dosen - Sungai Penuh",
+        "review": "Program Plus Tour ke Taif dan Badar gratis menjadi nilai tambah yang luar biasa. Pelayanan spesial yang dijanjikan bukan sekadar jargon iklan semata, melainkan benar-benar diwujudkan di lapangan dengan sangat profesional."
+      },
+      {
+        "id": 4,
+        "name": "Ibu Fatimah Az-Zahra",
+        "profession": "Wiraswasta - Muara Bungo",
+        "review": "Fasilitas terbaik dan pembimbingnya berwawasan luas. Kami merasa sangat aman, nyaman, dan dilayani dengan maksimal sejak keberangkatan dari bandara hingga kembali lagi ke tanah air."
+      },
+      {
+        "id": 5,
+        "name": "Bapak Hendra Wijaya",
+        "profession": "Karyawan Swasta - Merangin",
+        "review": "Manasik privat yang diberikan sebelum berangkat sangat membantu saya yang baru pertama kali beribadah umroh. Penjelasan tata cara ibadah jadi jauh lebih personal dan mudah dipahami."
+      },
+      {
+        "id": 6,
+        "name": "Hj. Nelly Marlina",
+        "profession": "Pensiunan - Jambi",
+        "review": "Pelayanan mutawwif yang responsif dan tulus sangat berkesan bagi kami yang sudah lanjut usia. Fasilitas hotel dan transportasi bus selama di Makkah-Madinah pun sangat bersih dan nyaman."
+      }
+    ]
+  },
+  "layanan": {
+    "heroTagline": "KENYAMANAN ANDA BERIBADAH",
+    "heroPriority": "Prioritas",
+    "heroMain": "Utama Kami",
+    "umrahPackageTitle": "PAKET UMRAH",
+    "umrahSubtitle": "Layanan Spesial & Plus untuk Anda",
+    "umrahDesc": "Sempurnakan ibadah umrah Anda dengan penuh khusyuk bersama Kiswah Travel & Tour. Kenyamanan Anda adalah prioritas kami, melalui pilihan paket yang dirancang khusus untuk Anda.",
+    "hajiPackageTitle": "PAKET HAJI KHUSUS",
+    "hajiQuestion": "Mau naik haji tapi gak mau nunggu sampai puluhan tahun?",
+    "hajiAnswer": "Anda sudah tepat mengunjungi kami. Bukan cuma waktu tunggu yang singkat, tetapi kenyamanan dan kemewahan beribadah juga akan Anda dapatkan di sini.",
+    "hajiFacilitiesSubtitle": "Fasilitas Plus & Istimewa",
+    "hajiWhatYouGet": "Apa yang anda dapatkan ?",
+    "h1": "Waktu Tunggu jauh Lebih singkat 5-7 Tahun.",
+    "h2": "Fasilitas Hotel Bintang 5 dan tenda maktab premium",
+    "h3": "Pelayanan Eksklusif dari tanah air sampai tanah suci.",
+    "h4": "Aman karena dijaga oleh petugas khusus yang memantau dan membimbing anda setiap saat",
+    "tourPackageTitle": "PAKET TOUR MUSLIM",
+    "tourQuestion": "Capek kerja terus? Mau helling tapi masih dapat pahala ?",
+    "tourAnswer": "Biar enggak cuma fisik yang istirahat, yuk cobain wisata religi. Selain bikin pikiran adem (healing maksimal), tabungan pahala juga makin nambah. Definisi healing dunia akhirat yang sesungguhnya!",
+    "egyptTitle": "Mesir & Sejarahnya",
+    "egyptDesc1": "Melihat langsung bukti sejarah yang diabadikan dalam Al-Qur'an. Berdiri kokoh di Mesir, Piramida menjadi saksi bisu runtuhnya sebuah tirani yang takluk oleh kesombongan.",
+    "egyptDesc2": "Jangan lewatkan kesempatan menyelami kisah ini secara langsung. Kami siap menemani perjalanan Anda dengan fasilitas paling nyaman dan rute terbaik.",
+    "istanbulTitle": "Kejayaan Istanbul",
+    "istanbulDesc1": "Di sinilah Islam pernah berdiri sebagai kekuatan terbesar di dunia. Mari kembali ke masa kejayaan dan manjakan diri Anda dalam kemewahan klasik Islami di Istanbul.",
+    "istanbulDesc2": "Bersama Tour & Travel kami, Anda akan diajak menyusuri potongan sejarah yang megah dengan fasilitas yang nyaman, mewah, dan berkelas. Siap melangkah ke masa lalu?",
+    "comingSoon": "Coming Soon",
+    "featuredDestination": "Destinasi Pilihan",
+    "priceLabel": "Harga",
+    "facilitiesHeader": "Fasilitas",
+    "choosePackage": "PILIH PAKET",
+    "packages": [
+      {
+        "name": "EKONOMI",
+        "price": "32,5 Juta",
+        "duration": "12 Hari",
+        "features": [
+          "Bus Full AC",
+          "Air Zam-zam 5 Liter",
+          "Hotel Dekat Masjidil Haram (15 Menit)",
+          "Visa Umrah",
+          "Perlengkapan Umrah",
+          "Transport Kerinci-Padang",
+          "Tour Badar"
+        ]
+      },
+      {
+        "name": "REGULER",
+        "price": "34,9 Juta",
+        "duration": "12 Hari",
+        "features": [
+          "Bus Full AC",
+          "Air Zam-zam 5 Liter",
+          "Hotel Dekat Masjidil Haram (7 Menit)",
+          "Visa Umrah",
+          "Perlengkapan Umrah",
+          "Transport Kerinci-Padang",
+          "Tour Taif & Badar"
+        ]
+      },
+      {
+        "name": "ARBAIN",
+        "price": "37,9 Juta",
+        "duration": "16 Hari",
+        "features": [
+          "Bus Full AC",
+          "Air Zam-zam 5 Liter",
+          "Hotel Dekat Masjidil Haram (7 Menit)",
+          "Visa Umrah",
+          "Perlengkapan Umrah",
+          "Transport Kerinci-Padang",
+          "Tour Taif & Badar",
+          "16 Hari (Shalat 40 Waktu di Madinah)"
+        ]
+      }
+    ]
+  },
+  "jadwal": {
+    "heroTagline": "WUJUDKAN KE-RINDUANMU",
+    "heroSub": "Pada",
+    "heroBaitullah": "BAITULLAH",
+    "heroCTA": "Amankan Kuota Anda Sekarang",
+    "title": "JADWAL KEBERANGKATAN",
+    "subtitle": "Pilih Waktu Terbaik Untuk Ibadah Anda",
+    "quotaAvailable": "Jumlah Kuota Tersedia",
+    "flight": "Penerbangan",
+    "selectPackage": "Pilih Paket",
+    "quote": "\"Labbaikallahumma Labbaik...\"",
+    "quoteDesc": "Panggilan itu bukan untuk mereka yang mampu, tapi untuk mereka yang merindu. Niatkan sekarang, biarkan Allah yang mampukan langkahmu menuju rumah-Nya."
+  },
+  "tentang": {
+    "heroTitle": "Pengalaman Panjang yang Mengerti Setiap Kebutuhan Langkah Suci Anda",
+    "heroDesc": "Lebih dari sekadar agen travel, sejarah panjang kami adalah bukti komitmen tanpa henti untuk selalu menghadirkan pelayanan Umroh yang aman, nyaman, dan penuh berkah.",
+    "aboutUsTitle": "About US",
+    "aboutUsDesc": "Mulai merintis sejak tahun 2017 dalam mengantarkan jemaah ke Makkah dan Madinah, Kiswah Al Mabrur Indonesia resmi berdiri pada 13 Maret 2025 sebagai penyedia layanan tour & travel umrah, haji khusus, dan wisata religi. Dengan komitmen pada pelayanan terbaik, kami bersyukur terus mendapatkan kepercayaan luas dari masyarakat, menjadikan kami terus berkembang dan secara konsisten melayani keberangkatan jemaah tanpa henti.",
+    "ppiu": "PPIU : 12123300499690003",
+    "teamTitle": "TIM PROFESIONAL KAMI",
+    "teamSubtitle": "Sehangat Kiswah Setulus Pelayanan Kami",
+    "roleCommissioner": "Komisaris",
+    "rolePresidentDirector": "Direktur Utama",
+    "roleOperationalDirector": "Direktur Operasional",
+    "managementTitle": "STAF MANAGEMENT",
+    "headquartersTitle": "OUR HEADQUARTERS & GALLERY",
+    "contactTitle": "HUBUNGI KAMI",
+    "contactSubtitle": "Silahkan hubungi kami atau kunjungi kantor pelayanan kami untuk konsultasi perjalanan ibadah Anda.",
+    "officeAddress": "Alamat Kantor",
+    "officeAddressText": "Desa Air Bersih, Dusun Baru Semurup, Kec. Air Hangat Barat, Kabupaten Kerinci, Jambi 37166",
+    "contactUs": "Hubungi Kami",
+    "officialEmail": "Email Resmi",
+    "opsHours": "Jam Operasional",
+    "opsHoursText": "Senin - Sabtu: 08.00 - 16.00 WIB | Minggu / Hari Libur: Tutup",
+    "waBtn": "Hubungi Melalui WhatsApp"
+  },
+  "panduan": {
+    "heroTitle": "Panduan Ibadah Umroh & Doa",
+    "heroDesc": "Bimbingan langkah demi langkah untuk menyempurnakan ibadah suci Anda di tanah suci sesuai dengan tuntunan sunnah Rasulullah SAW.",
+    "rukunTitle": "RUKUN UMROH",
+    "rukunDesc": "Rangkaian ibadah yang wajib dilaksanakan secara berurutan dan tidak dapat digantikan dengan denda (Dam). Jika ditinggalkan, Umroh menjadi tidak sah.",
+    "step1Title": "1. Niat & Ihram",
+    "step1Desc": "Mengenakan pakaian ihram dan berniat untuk melaksanakan ibadah umroh di lokasi Miqat (batas geografis dimulainya ibadah).",
+    "step2Title": "2. Thawaf",
+    "step2Desc": "Mengelilingi Ka'bah sebanyak 7 kali putaran berlawanan arah jarum jam, dimulai dari Hajar Aswad dan diakhiri di Hajar Aswad.",
+    "step3Title": "3. Sa'i",
+    "step3Desc": "Berjalan/berlari-lari kecil antara bukit Shafa dan bukit Marwah sebanyak 7 kali balikan, dimulai dari Shafa dan berakhir di Marwah.",
+    "step4Title": "4. Tahallul",
+    "step4Desc": "Mencukur atau memotong sebagian rambut kepala (minimal 3 helai rambut) sebagai tanda selesainya seluruh rangkaian ibadah Umroh.",
+    "wajibTitle": "Wajib Umroh",
+    "wajibDesc": "Kewajiban dalam ibadah Umroh yang harus dikerjakan. Jika ditinggalkan karena udzur atau sengaja, Umrohnya tetap sah namun jemaah wajib membayar denda (Dam):",
+    "wajibList": [
+      {
+        "title": "Niat Ihram dari Miqat",
+        "desc": "Memulai niat ibadah di batas geografis yang telah ditentukan (seperti Bir Ali/Dzulkulaifah bagi jemaah dari Madinah, atau Yalamlam bagi jemaah dari arah Yaman/Indonesia)."
+      },
+      {
+        "title": "Menjaga Diri dari Larangan Ihram",
+        "desc": "Menghindari hal-hal yang dilarang selama berada dalam keadaan ihram hingga bertahallul."
+      }
+    ],
+    "laranganTitle": "Larangan Ihram",
+    "laranganDesc": "Hal-hal yang tidak boleh dilakukan oleh jemaah yang telah mengenakan pakaian ihram dan melafazkan niat ihram hingga selesai tahallul:",
+    "laranganList": [
+      "Memotong rambut/bulu badan",
+      "Memotong atau mencabut kuku",
+      "Menggunakan wewangian/parfum",
+      "Melangsungkan akad nikah",
+      "Memakai pakaian berjahit (pria)",
+      "Menutup kepala secara langsung (pria)",
+      "Menutup wajah & telapak tangan (wanita)",
+      "Berburu hewan liar di tanah suci"
+    ],
+    "bookTitle": "Buku Panduan & Doa Digital",
+    "bookDesc": "Guna memudahkan persiapan dan kekhusyukan ibadah Anda, kami menyediakan buku saku panduan dan doa interaktif yang dapat dibaca dan diunduh secara langsung.",
+    "book1Title": "Buku Tuntunan Manasik Umroh",
+    "book1Desc": "Panduan praktis terperinci mengenai tata cara manasik, doa-doa khusus di rute perjalanan, serta tips ibadah dari pembimbing ahli.",
+    "book2Title": "Buku Doa & Dzikir Manasik",
+    "book2Desc": "Kumpulan doa-doa utama dan dzikir sunnah lengkap dari niat ihram, tawaf, sa'i, hingga doa saat memasuki Masjidil Haram & Nabawi.",
+    "openGDrive": "Buka di Google Drive",
+    "consultTitle": "Butuh Konsultasi Mengenai Ibadah Umroh?",
+    "consultDesc": "Tim pembimbing ibadah dan Customer Service Kiswah Tour & Travel siap membantu menjawab segala pertanyaan serta mendampingi persiapan perjalanan ibadah Anda.",
+    "consultBtn": "Hubungi Pembimbing Kami"
+  },
+  "artikel": {
+    "heroTitle": "Wawasan & Berita",
+    "heroDesc": "Temukan informasi terbaru seputar layanan Umroh, Haji, dan tips perjalanan ibadah dari Kiswah.id",
+    "searchPlaceholder": "Cari artikel, tips, atau berita...",
+    "allCategories": "Semua",
+    "readMore": "Baca Selengkapnya",
+    "noArticlesTitle": "Tidak ditemukan artikel",
+    "noArticlesDesc": "Coba gunakan kata kunci lain atau pilih kategori berbeda.",
+    "byAdmin": "Admin",
+    "generalCategory": "Umum"
+  }
+}

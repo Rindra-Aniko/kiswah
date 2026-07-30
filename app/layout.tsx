@@ -67,6 +67,8 @@ export const viewport: Viewport = {
   themeColor: "#2a1d12",
 };
 
+import { LanguageProvider } from "@/lib/i18n/context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,10 +90,12 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #B48421,0 0 5px #B48421"
         />
-        <Navbar />
-        {children}
-        <WhatsAppFloat />
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          {children}
+          <WhatsAppFloat />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

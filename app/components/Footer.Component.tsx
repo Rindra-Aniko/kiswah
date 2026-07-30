@@ -1,8 +1,13 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/i18n/context';
 
 export default function Footer() {
+  const { dict } = useLanguage();
+
   return (
     <footer className="bg-[#291F15] text-white font-poppins pt-14 pb-8 px-4 sm:px-8 md:px-16 lg:px-24 border-t border-[#B48421]/20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 lg:gap-12 pb-12">
@@ -30,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-gray-300 text-sm lg:text-sm leading-relaxed max-w-sm">
-            Travel umroh terpercaya dengan pelayanan maksimal, Pembimbing Berpengalaman dengan Fasilitas terbaik.
+            {dict.footer.tagline}
           </p>
         </div>
 
@@ -38,19 +43,19 @@ export default function Footer() {
         <div className="md:col-span-3 flex flex-col md:items-center">
           <div className="flex flex-col space-y-3 text-sm">
             <Link href="/" className="hover:text-[#B48421] transition-colors duration-200">
-              Beranda
+              {dict.nav.home}
             </Link>
             <Link href="/layanan" className="hover:text-[#B48421] transition-colors duration-200">
-              Layanan
+              {dict.nav.services}
             </Link>
             <Link href="/jadwal" className="hover:text-[#B48421] transition-colors duration-200">
-              Jadwal
+              {dict.nav.schedule}
             </Link>
             <Link href="/artikel" className="hover:text-[#B48421] transition-colors duration-200">
-              Info & Artikel
+              {dict.nav.info}
             </Link>
             <Link href="/tentang-kami" className="hover:text-[#B48421] transition-colors duration-200">
-              Tentang Kami
+              {dict.nav.about}
             </Link>
           </div>
         </div>
@@ -58,9 +63,9 @@ export default function Footer() {
         {/* Kolom 3: Informasi Alamat & Kontak Sosial Media */}
         <div className="md:col-span-4 flex flex-col space-y-4 text-sm lg:text-sm">
           <div>
-            <h3 className="font-bold tracking-wider text-white mb-1">ALAMAT :</h3>
+            <h3 className="font-bold tracking-wider text-white mb-1">{dict.footer.addressTitle}</h3>
             <p className="text-gray-300 leading-relaxed">
-              Desa Air Bersih, Kecamatan Air Hangat Barat, Kabupaten Kerinci, Provinsi Jambi
+              {dict.footer.addressText}
             </p>
           </div>
 
@@ -84,7 +89,7 @@ export default function Footer() {
 
             {/* Informasi Kode Pos */}
             <div className="flex items-center space-x-1 text-gray-300">
-              <span>Kode Pos :</span>
+              <span>{dict.footer.postalCode}</span>
               <span className="font-semibold text-white">37161</span>
             </div>
 
@@ -124,9 +129,9 @@ export default function Footer() {
 
       {/* Bagian Hak Cipta & Pengembang Web */}
       <div className="border-t border-gray-700/50 pt-6 text-center text-xs lg:text-xs text-gray-400 space-y-1">
-        <p>© 2026 Copyright Kiswah Tour & Travel</p>
+        <p>{dict.footer.copyright}</p>
         <p>
-          Create By{' '}
+          {dict.footer.createdBy}{' '}
           <a 
             href="https://ryndigitalpro.com" 
             target="_blank" 
@@ -139,4 +144,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+}

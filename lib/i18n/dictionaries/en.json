@@ -1,0 +1,272 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "schedule": "Schedule",
+    "umrahGuide": "Umrah Guide",
+    "info": "Info & Articles",
+    "about": "About Us",
+    "register": "REGISTER",
+    "registerAgent": "BECOME AGENT"
+  },
+  "footer": {
+    "tagline": "Trusted Umrah travel with maximum service, Experienced Guides with the best facilities.",
+    "addressTitle": "ADDRESS :",
+    "addressText": "Air Bersih Village, Air Hangat Barat District, Kerinci Regency, Jambi Province, Indonesia",
+    "postalCode": "Postal Code :",
+    "copyright": "© 2026 Copyright Kiswah Tour & Travel",
+    "createdBy": "Create By"
+  },
+  "cta": {
+    "registerWhatsapp": "Assalamu'alaikum Kiswah Tour & Travel, I would like to register for Umrah services...",
+    "agentWhatsapp": "Assalamu'alaikum Kiswah Tour & Travel, I am interested in registering as an agent...",
+    "waFloatTooltip": "Need help? Free consultation via our WhatsApp 😊",
+    "waFloatMsg": "Assalamu'alaikum Kiswah Tour & Travel, I would like to inquire about your Umrah services..."
+  },
+  "language": {
+    "id": "Indonesia",
+    "en": "English",
+    "select": "Select Language"
+  },
+  "home": {
+    "heroServices": "Umrah - Special Hajj - Muslim Tour",
+    "specialService": "SPECIAL SERVICE",
+    "freeTour": "FREE TOUR",
+    "taifBadar": "Ta'if & Badar",
+    "whySpecialTitle": "Why is this",
+    "whySpecialSubtitle": "special ?",
+    "f1Title": "Free Private Manasik",
+    "f1Desc": "Enjoy 2 private manasik sessions at no additional cost as a companion to group manasik, preparing your Umrah worship optimally before departure.",
+    "f2Title": "Luggage Delivered Directly to Hotel Room",
+    "f2Desc": "Enjoy exclusive service without worrying about luggage upon departure. We ensure pilgrims' luggage arrives directly at their hotel rooms, allowing you to focus on worship with peace and devotion.",
+    "f3Title": "Hotel Near Places of Worship",
+    "f3Desc": "Our selected hotels are in premium locations, approximately 5–7 minutes walk to Masjid al-Haram in Makkah and Al-Masjid an-Nabawi in Madinah.",
+    "f4Title": "Free Tour Plus to Taif and Badar",
+    "f4Desc": "In addition to performing Umrah, pilgrims will have the opportunity to join religious tours to Taif and Jabal Nur.",
+    "f5Title": "3 Times Umrah Perform",
+    "f5Desc": "Get the opportunity to perform Umrah 3 times in one trip! Fulfill your sincere intention to dedicate the rewards of Umrah for your beloved parents and family.",
+    "f6Title": "Reliable & Experienced Mutawwif",
+    "f6Desc": "Our Mutawwif are more than just worship guides; they are verified companions with social sensitivity, ensuring your pilgrimage is well-guided and comfortable.",
+    "checkPackagesBtn": "VIEW AVAILABLE UMRAH PACKAGES",
+    "ctaHeading1": "Want to travel to the Holy Land hassle-free?",
+    "ctaHeading2": "Secure your quota this month!",
+    "checkQuotaBtnLine1": "CHECK QUOTA AND",
+    "checkQuotaBtnLine2": "SCHEDULE"
+  },
+  "testimoni": {
+    "badge": "Pilgrims Testimonials",
+    "title": "Professional & Experienced",
+    "descPart1": "Since 2017, we have been trusted to accompany more than ",
+    "descHighlight": "4,500 pilgrims",
+    "descPart2": " in their holy journey.",
+    "list": [
+      {
+        "id": 1,
+        "name": "Mr. Ahmad Subagja",
+        "profession": "Entrepreneur - Jambi",
+        "review": "The service from Kiswah Tour & Travel is truly extraordinary. From private manasik sessions to luggage delivered directly to our hotel room door, everything made our family's pilgrimage peaceful and stress-free."
+      },
+      {
+        "id": 2,
+        "name": "Mrs. Siti Rahma",
+        "profession": "Civil Servant - Kerinci",
+        "review": "So grateful for choosing this travel agency. The hotel location is really close to Masjidil Haram, just a few minutes' walk. The Mutawwif was very patient and reliable in guiding us through 3 Umrahs."
+      },
+      {
+        "id": 3,
+        "name": "H. Dr. Faisal Azhari",
+        "profession": "Lecturer - Sungai Penuh",
+        "review": "The complimentary Plus Tour program to Taif and Badar is a fantastic added value. The promised special service is not just marketing jargon, but truly delivered professionally on the ground."
+      },
+      {
+        "id": 4,
+        "name": "Mrs. Fatimah Az-Zahra",
+        "profession": "Self-Employed - Muara Bungo",
+        "review": "Top facilities and knowledgeable guides. We felt very safe, comfortable, and well cared for from airport departure until returning home."
+      },
+      {
+        "id": 5,
+        "name": "Mr. Hendra Wijaya",
+        "profession": "Private Sector Employee - Merangin",
+        "review": "The private manasik session provided before departure was immensely helpful for a first-timer like me. The worship procedures became much more personal and easy to understand."
+      },
+      {
+        "id": 6,
+        "name": "Hj. Nelly Marlina",
+        "profession": "Retiree - Jambi",
+        "review": "The responsive and sincere service from the Mutawwif left a deep impression on elderly pilgrims like us. Hotel facilities and bus transport in Makkah-Madinah were very clean and comfortable."
+      }
+    ]
+  },
+  "layanan": {
+    "heroTagline": "YOUR WORSHIP COMFORT IS OUR",
+    "heroPriority": "Top",
+    "heroMain": "Priority",
+    "umrahPackageTitle": "UMRAH PACKAGES",
+    "umrahSubtitle": "Special & Plus Services for You",
+    "umrahDesc": "Perfect your Umrah pilgrimage with complete devotion alongside Kiswah Travel & Tour. Your comfort is our priority, through package options specifically designed for you.",
+    "hajiPackageTitle": "SPECIAL HAJJ PACKAGES",
+    "hajiQuestion": "Want to perform Hajj without waiting for decades?",
+    "hajiAnswer": "You have come to the right place. Not only is the waiting period much shorter, but comfort and luxury during worship are also guaranteed here.",
+    "hajiFacilitiesSubtitle": "Plus & Special Facilities",
+    "hajiWhatYouGet": "What do you get ?",
+    "h1": "Much shorter waiting period (5-7 years).",
+    "h2": "5-Star hotel facilities and premium maktab tents.",
+    "h3": "Exclusive services from home country to the Holy Land.",
+    "h4": "Safe & secured by dedicated officers monitoring and guiding you at all times.",
+    "tourPackageTitle": "MUSLIM TOUR PACKAGES",
+    "tourQuestion": "Tired of non-stop work? Want to relax while gaining rewards?",
+    "tourAnswer": "Give yourself a spiritual retreat! In addition to refreshing your mind, you earn spiritual rewards. The true definition of healing in this life and the hereafter!",
+    "egyptTitle": "Egypt & Its History",
+    "egyptDesc1": "Witness the historical landmarks preserved in the Holy Qur'an. Standing firmly in Egypt, the Pyramids bear silent witness to the fall of tyranny.",
+    "egyptDesc2": "Don't miss the opportunity to explore this history firsthand. We are ready to accompany your journey with top comfort and curated itineraries.",
+    "istanbulTitle": "Glory of Istanbul",
+    "istanbulDesc1": "Where Islam once stood as the greatest power in the world. Step back into the golden era and indulge in classical Islamic elegance in Istanbul.",
+    "istanbulDesc2": "With our Tour & Travel, journey through magnificent history accompanied by comfortable, luxurious, and high-class facilities.",
+    "comingSoon": "Coming Soon",
+    "featuredDestination": "Featured Destination",
+    "priceLabel": "Price",
+    "facilitiesHeader": "Facilities",
+    "choosePackage": "SELECT PACKAGE",
+    "packages": [
+      {
+        "name": "ECONOMY",
+        "price": "32.5 Million",
+        "duration": "12 Days",
+        "features": [
+          "Full AC Bus",
+          "5 Liters Zam-zam Water",
+          "Hotel Near Masjidil Haram (15 Mins)",
+          "Umrah Visa",
+          "Umrah Equipment",
+          "Kerinci-Padang Transport",
+          "Badar Tour"
+        ]
+      },
+      {
+        "name": "REGULAR",
+        "price": "34.9 Million",
+        "duration": "12 Days",
+        "features": [
+          "Full AC Bus",
+          "5 Liters Zam-zam Water",
+          "Hotel Near Masjidil Haram (7 Mins)",
+          "Umrah Visa",
+          "Umrah Equipment",
+          "Kerinci-Padang Transport",
+          "Taif & Badar Tour"
+        ]
+      },
+      {
+        "name": "ARBAIN",
+        "price": "37.9 Million",
+        "duration": "16 Days",
+        "features": [
+          "Full AC Bus",
+          "5 Liters Zam-zam Water",
+          "Hotel Near Masjidil Haram (7 Mins)",
+          "Umrah Visa",
+          "Umrah Equipment",
+          "Kerinci-Padang Transport",
+          "Taif & Badar Tour",
+          "16 Days (40 Prayers in Madinah)"
+        ]
+      }
+    ]
+  },
+  "jadwal": {
+    "heroTagline": "FULFILL YOUR LONGING FOR THE",
+    "heroSub": "Holy",
+    "heroBaitullah": "BAITULLAH",
+    "heroCTA": "Secure Your Quota Now",
+    "title": "DEPARTURE SCHEDULE",
+    "subtitle": "Choose the Best Time for Your Pilgrimage",
+    "quotaAvailable": "Available Seats Quota",
+    "flight": "Flight Airline",
+    "selectPackage": "Select Package",
+    "quote": "\"Labbaikallahumma Labbaik...\"",
+    "quoteDesc": "The call is not only for those who are capable, but for those who long. Set your intention now, and let Allah enable your steps towards His House."
+  },
+  "tentang": {
+    "heroTitle": "Long Standing Experience Understanding Every Step of Your Holy Journey",
+    "heroDesc": "More than just a travel agency, our long history is proof of unwavering commitment to deliver safe, comfortable, and blessed Umrah services.",
+    "aboutUsTitle": "About Us",
+    "aboutUsDesc": "Pioneering since 2017 in accompanying pilgrims to Makkah and Madinah, Kiswah Al Mabrur Indonesia was officially established on March 13, 2025 as a tour & travel provider for Umrah, Special Hajj, and religious tours. Committed to excellence, we are grateful for the continuous trust of our pilgrims.",
+    "ppiu": "PPIU License : 12123300499690003",
+    "teamTitle": "OUR PROFESSIONAL TEAM",
+    "teamSubtitle": "As Warm as the Kiswah, As Sincere as Our Service",
+    "roleCommissioner": "Commissioner",
+    "rolePresidentDirector": "President Director",
+    "roleOperationalDirector": "Operations Director",
+    "managementTitle": "MANAGEMENT STAFF",
+    "headquartersTitle": "OUR HEADQUARTERS & GALLERY",
+    "contactTitle": "CONTACT US",
+    "contactSubtitle": "Feel free to contact us or visit our service office for your pilgrimage consultation.",
+    "officeAddress": "Office Address",
+    "officeAddressText": "Air Bersih Village, Dusun Baru Semurup, Air Hangat Barat District, Kerinci Regency, Jambi 37166",
+    "contactUs": "Contact Us",
+    "officialEmail": "Official Email",
+    "opsHours": "Operational Hours",
+    "opsHoursText": "Monday - Saturday: 08:00 - 16:00 WIB | Sunday / Holidays: Closed",
+    "waBtn": "Contact via WhatsApp"
+  },
+  "panduan": {
+    "heroTitle": "Umrah Worship & Prayer Guide",
+    "heroDesc": "Step-by-step guidance to perfect your holy pilgrimage in the Holy Land according to the Sunnah of Prophet Muhammad SAW.",
+    "rukunTitle": "UMRAH PILLARS (RUKUN)",
+    "rukunDesc": "A series of rituals that must be performed sequentially and cannot be replaced by a penalty (Dam). If omitted, the Umrah is invalid.",
+    "step1Title": "1. Intention & Ihram",
+    "step1Desc": "Wearing Ihram garments and making the intention to perform Umrah at the Miqat boundary.",
+    "step2Title": "2. Tawaf",
+    "step2Desc": "Circumambulating the Kaaba 7 times counterclockwise, starting and ending at Hajar al-Aswad.",
+    "step3Title": "3. Sa'i",
+    "step3Desc": "Walking/brisk walking 7 times between Safa and Marwah hills, starting at Safa and ending at Marwah.",
+    "step4Title": "4. Tahallul",
+    "step4Desc": "Shaving or trimming hair (at least 3 strands) signaling the completion of the Umrah rituals.",
+    "wajibTitle": "Umrah Obligations (Wajib)",
+    "wajibDesc": "Obligations in Umrah that must be performed. If omitted due to a valid excuse or intentionally, the Umrah remains valid but the pilgrim must pay a penalty (Dam):",
+    "wajibList": [
+      {
+        "title": "Niat (Intention) for Ihram from Miqat",
+        "desc": "Making the sacred intention for Umrah at designated geographical boundaries (such as Bir Ali/Dzulkulaifah for Madinah travelers, or Yalamlam for Yemen/Indonesia travelers)."
+      },
+      {
+        "title": "Refraining from Ihram Prohibitions",
+        "desc": "Avoiding forbidden actions while in the state of Ihram until Tahallul is completed."
+      }
+    ],
+    "laranganTitle": "Ihram Prohibitions",
+    "laranganDesc": "Prohibited actions for pilgrims who have entered the state of Ihram and pronounced the intention until Tahallul:",
+    "laranganList": [
+      "Cutting or shaving hair/body hair",
+      "Clipping or removing nails",
+      "Applying perfume or fragrance",
+      "Contracting marriage (Akad Nikah)",
+      "Wearing stitched clothes (men)",
+      "Covering head directly (men)",
+      "Covering face & hands (women)",
+      "Hunting wild animals in the holy land"
+    ],
+    "bookTitle": "Digital Guidebook & Prayers",
+    "bookDesc": "To facilitate your preparation and devotion, we provide interactive pocket guidebooks and prayers for direct reading and download.",
+    "book1Title": "Umrah Rituals Guidebook",
+    "book1Desc": "Detailed practical guide on Umrah rituals, specific prayers during travel, and worship tips from expert guides.",
+    "book2Title": "Rituals Prayers & Dhikr Book",
+    "book2Desc": "Comprehensive collection of essential prayers and prophetic dhikr from Ihram, Tawaf, Sa'i, to entering Masjidil Haram & Nabawi.",
+    "openGDrive": "Open in Google Drive",
+    "consultTitle": "Need Consultation Regarding Umrah Worship?",
+    "consultDesc": "Our spiritual guidance team and Customer Service are ready to answer all your questions and accompany your pilgrimage preparation.",
+    "consultBtn": "Contact Our Spiritual Guide"
+  },
+  "artikel": {
+    "heroTitle": "Insights & News",
+    "heroDesc": "Discover the latest information regarding Umrah, Hajj services, and travel tips from Kiswah.id",
+    "searchPlaceholder": "Search articles, tips, or news...",
+    "allCategories": "All",
+    "readMore": "Read More",
+    "noArticlesTitle": "No articles found",
+    "noArticlesDesc": "Try using different keywords or select a different category.",
+    "byAdmin": "Admin",
+    "generalCategory": "General"
+  }
+}

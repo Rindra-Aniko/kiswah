@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
+import { useLanguage } from '@/lib/i18n/context';
 
 interface Testimonial {
   id: number;
@@ -10,50 +11,16 @@ interface Testimonial {
 }
 
 export default function TestimonialCarousel() {
-  const testimonials: Testimonial[] = [
-    {
-      id: 1,
-      name: "Bapak Ahmad Subagja",
-      profession: "Pengusaha - Jambi",
-      rating: 5,
-      review: "Pelayanan dari Kiswah Tour & Travel sangat luar biasa. Sejak manasik privat hingga koper yang diurus langsung sampai di depan kamar hotel, semuanya membuat ibadah kami sekeluarga menjadi sangat khusyuk tanpa beban pikiran."
-    },
-    {
-      id: 2,
-      name: "Ibu Siti Rahma",
-      profession: "PNS - Kerinci",
-      rating: 5,
-      review: "Sangat bersyukur memilih travel ini. Lokasi hotelnya benar-benar dekat dengan Masjidil Haram, hanya jalan kaki beberapa menit saja. Pembimbing ibadah (Mutawwif) juga sangat sabar dan handal mendampingi kami selama 3 kali umroh."
-    },
-    {
-      id: 3,
-      name: "H. Dr. Faisal Azhari",
-      profession: "Dosen - Sungai Penuh",
-      rating: 5,
-      review: "Program Plus Tour ke Taif dan Badar gratis menjadi nilai tambah yang luar biasa. Pelayanan spesial yang dijanjikan bukan sekadar jargon iklan semata, melainkan benar-benar diwujudkan di lapangan dengan sangat profesional."
-    },
-    {
-      id: 4,
-      name: "Ibu Fatimah Az-Zahra",
-      profession: "Wiraswasta - Muara Bungo",
-      rating: 5,
-      review: "Fasilitas terbaik dan pembimbingnya berwawasan luas. Kami merasa sangat aman, nyaman, dan dilayani dengan maksimal sejak keberangkatan dari bandara hingga kembali lagi ke tanah air."
-    },
-    {
-      id: 5,
-      name: "Bapak Hendra Wijaya",
-      profession: "Karyawan Swasta - Merangin",
-      rating: 5,
-      review: "Manasik privat yang diberikan sebelum berangkat sangat membantu saya yang baru pertama kali beribadah umroh. Penjelasan tata cara ibadah jadi jauh lebih personal dan mudah dipahami."
-    },
-    {
-      id: 6,
-      name: "Hj. Nelly Marlina",
-      profession: "Pensiunan - Jambi",
-      rating: 5,
-      review: "Pelayanan mutawwif yang responsif and tulus sangat berkesan bagi kami yang sudah lanjut usia. Fasilitas hotel dan transportasi bus selama di Makkah-Madinah pun sangat bersih dan nyaman."
-    }
-  ];
+  const { dict } = useLanguage();
+
+  const rawTestimonials = (dict.testimoni as any).list || [];
+  const testimonials: Testimonial[] = rawTestimonials.map((item: any) => ({
+    id: item.id,
+    name: item.name,
+    profession: item.profession,
+    rating: 5,
+    review: item.review,
+  }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
@@ -107,15 +74,16 @@ export default function TestimonialCarousel() {
         {/* Header Title */}
         <div className="text-center mb-16">
           <span className="font-poppins text-[#B48421] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
-            Testimoni Jemaah
+            {dict.testimoni.badge}
           </span>
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-[#291F15] tracking-tight">
-            Profesional & Berpengalaman
+            {dict.testimoni.title}
           </h2>
           <div className="w-24 h-1 bg-[#B48421] mx-auto mt-6 rounded-full" />
           <p className="font-poppins text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-            Sejak tahun 2017, kami telah dipercaya mendampingi lebih dari{' '}
-            <span className="text-[#B48421] font-bold">4.500 jemaah</span> dalam perjalanan suci mereka.
+            {dict.testimoni.descPart1}
+            <span className="text-[#B48421] font-bold">{dict.testimoni.descHighlight}</span>
+            {dict.testimoni.descPart2}
           </p>
         </div>
 

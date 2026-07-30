@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { HiSearch, HiX } from 'react-icons/hi';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useLanguage } from '@/lib/i18n/context';
 
 export default function ArticleFilters({ categories }: { categories: any[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { dict } = useLanguage();
   
   const [search, setSearch] = useState(searchParams.get('search') || '');
   const activeCategory = searchParams.get('category') || '';
@@ -35,7 +37,7 @@ export default function ArticleFilters({ categories }: { categories: any[] }) {
         <form onSubmit={handleSearch} className="relative group">
           <input
             type="text"
-            placeholder="Cari artikel, tips, atau berita..."
+            placeholder={(dict.artikel as any)?.searchPlaceholder || "Cari artikel, tips, atau berita..."}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             suppressHydrationWarning
@@ -64,7 +66,7 @@ export default function ArticleFilters({ categories }: { categories: any[] }) {
               : 'bg-white text-gray-600 border-gray-200 hover:border-[#291F15] hover:text-[#291F15]'
           }`}
         >
-          Semua
+          {(dict.artikel as any)?.allCategories || "Semua"}
         </button>
         {categories.map((cat) => (
           <button

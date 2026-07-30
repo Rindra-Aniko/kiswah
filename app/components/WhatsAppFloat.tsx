@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '@/lib/i18n/context';
 
 const WhatsAppFloat = () => {
   const [showTooltip, setShowTooltip] = useState(false);
+  const { dict } = useLanguage();
 
   useEffect(() => {
     // Tampilkan tooltip otomatis setelah 3 detik
@@ -14,7 +16,8 @@ const WhatsAppFloat = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const whatsappUrl = "https://wa.me/6285163731467?text=Assalamu'alaikum%20Kiswah%20Tour%20%26%20Travel,%20saya%20ingin%20bertanya%20mengenai%20layanan%20umrah...";
+  const whatsappMessage = (dict.cta as any).waFloatMsg || "Assalamu'alaikum Kiswah Tour & Travel, saya ingin bertanya mengenai layanan umrah...";
+  const whatsappUrl = `https://wa.me/6285163731467?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-3 pointer-events-none">
@@ -24,7 +27,7 @@ const WhatsAppFloat = () => {
         ${showTooltip ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-10'}`}
       >
         <p className="text-sm font-medium leading-tight">
-          Butuh bantuan? Konsultasi gratis via WhatsApp kami 😊
+          {(dict.cta as any).waFloatTooltip || 'Butuh bantuan? Konsultasi gratis via WhatsApp kami 😊'}
         </p>
         {/* Panah Tooltip */}
         <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45"></div>

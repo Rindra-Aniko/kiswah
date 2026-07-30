@@ -1,7 +1,12 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/i18n/context';
 
 export default function Cekpaket() {
+  const { dict } = useLanguage();
+
   return (
     <section className="w-full bg-transparent py-10 px-4 flex justify-center items-center">
       <div className="max-w-7xl mx-auto text-center">
@@ -11,7 +16,7 @@ export default function Cekpaket() {
           href="/layanan"
           className="group relative inline-flex items-center justify-center font-poppins font-bold text-sm sm:text-base md:text-lg text-[#291F15] bg-[#B48421] hover:bg-[#d4af37] px-8 sm:px-12 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 uppercase tracking-wider"
         >
-          <span>LIHAT PAKET UMROH YANG TERSEDIA</span>
+          <span>{dict.home.checkPackagesBtn}</span>
           
           {/* Efek panah kecil saat di-hover */}
           <svg 
@@ -31,4 +36,4 @@ export default function Cekpaket() {
       </div>
     </section>
   );
-}
+}
