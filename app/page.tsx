@@ -27,9 +27,15 @@ export const metadata: Metadata = {
 };
 
 export default function BerandaPage() {
+  ReactDOM.preload("/image/hero-mobile.webp", {
+    as: "image",
+    fetchPriority: "high",
+    media: "(max-width: 640px)",
+  });
   ReactDOM.preload("/image/hero.webp", {
     as: "image",
     fetchPriority: "high",
+    media: "(min-width: 641px)",
   });
 
   return <BerandaContent />;

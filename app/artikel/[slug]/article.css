@@ -1,1 +1,11 @@
 @plugin "@tailwindcss/typography";
+
+.prose img {
+  max-height: 60vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+

@@ -50,16 +50,17 @@ export default function BerandaContent() {
     <div className="w-full">
       {/* Section Utama Hero */}
       <section className="relative w-full min-h-[600px] md:min-h-[90vh] flex items-center overflow-hidden py-16 px-4 sm:px-8 md:px-16 lg:px-24">
-        <Image
-          src="/image/hero.webp"
-          alt="Hero Background"
-          fill
-          priority
-          fetchPriority="high"
-          unoptimized
-          sizes="100vw"
-          className="object-cover object-center select-none pointer-events-none z-0"
-        />
+        <picture className="absolute inset-0 z-0">
+          <source media="(max-width: 640px)" srcSet="/image/hero-mobile.webp" />
+          <source media="(min-width: 641px)" srcSet="/image/hero.webp" />
+          <img
+            src="/image/hero.webp"
+            alt="Hero Background"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-center select-none pointer-events-none"
+          />
+        </picture>
         {/* Overlay Putih */}
         <div className="absolute inset-0 bg-white/78 z-10" />
 
