@@ -22,14 +22,15 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   const waUrl = `https://wa.me/${formattedPhone}?text=${encodedMessage}`;
 
   const baseStyles = "inline-block text-center font-bold tracking-wider transition-colors duration-200 uppercase text-sm shadow-sm active:scale-[0.98]";
-  const activeStyles = "bg-[#B48421] hover:bg-[#BD8A15] text-[#FFFFFF]";
-  const disabledStyles = "bg-gray-200 text-gray-400 cursor-not-allowed border border-gray-300 pointer-events-none";
+  const activeStyles = "bg-[#B48421] hover:bg-[#BD8A15] text-[#1A130F]";
+  const disabledStyles = "bg-gray-200 text-gray-500 cursor-not-allowed border border-gray-300 pointer-events-none";
 
   return (
     <a
       href={disabled ? "#" : waUrl}
       target={disabled ? "_self" : "_blank"}
       rel="noopener noreferrer"
+      aria-label={label}
       onClick={(e) => disabled && e.preventDefault()}
       className={`${baseStyles} ${disabled ? disabledStyles : activeStyles} ${className}`}
     >

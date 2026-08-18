@@ -148,9 +148,9 @@ export default function TestimonialCarousel() {
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <h4 className="font-poppins font-bold text-base text-[#291F15] leading-tight">
+                        <p className="font-poppins font-bold text-base text-[#291F15] leading-tight">
                           {item.name}
-                        </h4>
+                        </p>
                         <p className="font-poppins text-[10px] text-[#B48421] font-bold tracking-wider mt-1 uppercase">
                           {item.profession}
                         </p>
@@ -178,20 +178,25 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Indicators */}
-        <div className="h-8 flex items-center justify-center space-x-3 mt-12">
+        <div className="min-h-[48px] flex items-center justify-center gap-1 mt-10">
           {isMounted ? (
             [...Array(maxIndex + 1)].map((_, index) => (
               <button
                 key={index}
+                type="button"
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
-                }`}
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B48421] rounded-full transition-transform active:scale-95 cursor-pointer"
                 aria-label={`Go to slide ${index + 1}`}
-              />
+              >
+                <span
+                  className={`h-2 rounded-full transition-all duration-500 block ${
+                    currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
+                  }`}
+                />
+              </button>
             ))
           ) : (
-            <div className="h-2 w-10 bg-[#B48421] rounded-full" />
+            <div className="h-2 w-10 bg-[#B48421] rounded-full my-3" />
           )}
         </div>
 

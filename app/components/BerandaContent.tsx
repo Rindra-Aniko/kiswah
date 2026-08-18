@@ -64,8 +64,6 @@ export default function BerandaContent() {
           alt="Hero Background"
           fill
           priority
-          fetchPriority="high"
-          placeholder="blur"
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />

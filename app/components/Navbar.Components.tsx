@@ -74,7 +74,7 @@ const Navbar = () => {
               href={`https://wa.me/6285163731467?text=${registerWaText}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#B48421] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#966a10] transition-colors"
+              className="bg-[#B48421] text-[#1A130F] px-5 py-2 rounded-full text-xs font-extrabold hover:bg-[#c99528] transition-colors"
             >
               {dict.nav.register}
             </a>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="w-full bg-[#B48421] text-white text-center py-4 rounded-2xl font-bold"
+                className="w-full bg-[#B48421] text-[#1A130F] text-center py-4 rounded-2xl font-extrabold"
               >
                 {dict.nav.register}
               </a>
