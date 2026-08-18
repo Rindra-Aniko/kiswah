@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 import Navbar from "./components/Navbar.Components";
 import Footer from "./components/Footer.Component";
-import NextTopLoader from 'nextjs-toploader';
+import ClientTopLoader from "./components/ClientTopLoader";
 
 const WhatsAppFloat = dynamic(() => import("./components/WhatsAppFloat"));
 
@@ -88,17 +88,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${poppins.className} ${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}
       >
-        <NextTopLoader 
-          color="#B48421"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={false}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #B48421,0 0 5px #B48421"
-        />
+        <ClientTopLoader />
         <LanguageProvider>
           <div className="flex flex-col min-h-screen w-full">
             <header className="w-full sticky top-0 z-[999]">
