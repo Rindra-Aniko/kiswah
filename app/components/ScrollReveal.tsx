@@ -14,20 +14,20 @@ interface ScrollRevealProps {
 
 const animationStyles: Record<AnimationType, { hidden: React.CSSProperties; visible: React.CSSProperties }> = {
   'fade-up': {
-    hidden: { opacity: 0, transform: 'translateY(24px)' },
-    visible: { opacity: 1, transform: 'translateY(0)' },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   },
   'fade-left': {
-    hidden: { opacity: 0, transform: 'translateX(-24px)' },
-    visible: { opacity: 1, transform: 'translateX(0)' },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   },
   'fade-right': {
-    hidden: { opacity: 0, transform: 'translateX(24px)' },
-    visible: { opacity: 1, transform: 'translateX(0)' },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   },
   'zoom-in': {
-    hidden: { opacity: 0, transform: 'scale(0.92)' },
-    visible: { opacity: 1, transform: 'scale(1)' },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   },
 };
 
@@ -67,8 +67,8 @@ export default function ScrollReveal({
       className={className}
       style={{
         ...(isVisible ? styles.visible : styles.hidden),
-        transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
-        willChange: isVisible ? 'auto' : 'opacity, transform',
+        transition: `opacity 0.5s ease-out ${delay}ms`,
+        willChange: 'opacity',
         ...style,
       }}
     >

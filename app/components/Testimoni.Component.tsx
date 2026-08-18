@@ -177,21 +177,24 @@ export default function TestimonialCarousel() {
 
         {/* Indicators */}
         <div className="min-h-[48px] flex items-center justify-center gap-1 mt-10">
-          {[...Array(maxIndex + 1)].map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => setCurrentIndex(index)}
-              className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B48421] rounded-full transition-transform active:scale-95 cursor-pointer"
-              aria-label={`Go to slide ${index + 1}`}
-            >
-              <span
-                className={`h-2 rounded-full transition-all duration-500 block ${
-                  currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
-                }`}
-              />
-            </button>
-          ))}
+          {testimonials.map((item, index) => {
+            const isActive = currentIndex === index;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => setCurrentIndex(Math.min(index, maxIndex))}
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B48421] rounded-full transition-transform active:scale-95 cursor-pointer"
+                aria-label={`Go to slide ${index + 1}`}
+              >
+                <span
+                  className={`h-2 rounded-full transition-all duration-500 block ${
+                    isActive ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
+                  }`}
+                />
+              </button>
+            );
+          })}
         </div>
 
       </div>
