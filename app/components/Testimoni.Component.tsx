@@ -88,20 +88,19 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative group">
+        <div className="relative group min-h-[420px]">
           
           {/* Navigasi Kiri */}
-          {isMounted && (
-            <button 
-              onClick={handlePrev}
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
-              aria-label="Previous Slide"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-          )}
+          <button 
+            type="button"
+            onClick={handlePrev}
+            className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-4 min-w-[48px] min-h-[48px] rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100 cursor-pointer"
+            aria-label="Previous Slide"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
 
           {/* Masking Viewport */}
           <div className="overflow-hidden">
@@ -163,41 +162,36 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Navigasi Kanan */}
-          {isMounted && (
-            <button 
-              onClick={handleNext}
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100"
-              aria-label="Next Slide"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          )}
+          <button 
+            type="button"
+            onClick={handleNext}
+            className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-4 min-w-[48px] min-h-[48px] rounded-full bg-white shadow-xl text-[#291F15] hover:bg-[#B48421] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center border border-gray-100 cursor-pointer"
+            aria-label="Next Slide"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
 
         </div>
 
         {/* Indicators */}
         <div className="min-h-[48px] flex items-center justify-center gap-1 mt-10">
-          {isMounted ? (
-            [...Array(maxIndex + 1)].map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => setCurrentIndex(index)}
-                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B48421] rounded-full transition-transform active:scale-95 cursor-pointer"
-                aria-label={`Go to slide ${index + 1}`}
-              >
-                <span
-                  className={`h-2 rounded-full transition-all duration-500 block ${
-                    currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
-                  }`}
-                />
-              </button>
-            ))
-          ) : (
-            <div className="h-2 w-10 bg-[#B48421] rounded-full my-3" />
-          )}
+          {[...Array(maxIndex + 1)].map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setCurrentIndex(index)}
+              className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B48421] rounded-full transition-transform active:scale-95 cursor-pointer"
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              <span
+                className={`h-2 rounded-full transition-all duration-500 block ${
+                  currentIndex === index ? 'bg-[#B48421] w-10' : 'bg-gray-200 w-2 hover:bg-gray-300'
+                }`}
+              />
+            </button>
+          ))}
         </div>
 
       </div>

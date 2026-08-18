@@ -50,6 +50,7 @@ export default function ArtikelContent({
           alt="Info Background"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />

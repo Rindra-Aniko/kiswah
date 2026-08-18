@@ -1,23 +1,14 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import heroImg from "@/public/image/hero.webp";
 import pelayananImg from "@/public/image/pelayanan.webp";
 import Cekpaket from "./Cekpaket.Component";
+import TestimoniCarousel from "./Testimoni.Component";
 import ScrollReveal from "./ScrollReveal";
 import { useLanguage } from "@/lib/i18n/context";
-
-const TestimoniCarousel = dynamic(() => import("./Testimoni.Component"), {
-  ssr: true,
-  loading: () => (
-    <div className="w-full min-h-[400px] flex items-center justify-center bg-[#fdfcfb]">
-      <div className="w-8 h-8 rounded-full border-2 border-[#B48421] border-t-transparent animate-spin" />
-    </div>
-  ),
-});
 
 export default function BerandaContent() {
   const { dict } = useLanguage();
@@ -64,6 +55,7 @@ export default function BerandaContent() {
           alt="Hero Background"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />
