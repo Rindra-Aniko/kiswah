@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import ReactDOM from 'react-dom';
 import TentangKamiContent from '../components/TentangKamiContent';
 
 export const metadata: Metadata = {
@@ -27,6 +28,17 @@ export const metadata: Metadata = {
 };
 
 export default function TentangKamiPage() {
+  ReactDOM.preload("/image/pelayanan-mobile.webp", {
+    as: "image",
+    fetchPriority: "high",
+    media: "(max-width: 640px)",
+  });
+  ReactDOM.preload("/image/pelayanan.webp", {
+    as: "image",
+    fetchPriority: "high",
+    media: "(min-width: 641px)",
+  });
+
   return <TentangKamiContent />;
 }
 

@@ -35,15 +35,17 @@ export default function TentangKamiContent() {
   return (
     <div>
       <section className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden relative">
-        <Image
-          src={pelayananImg}
-          alt="Pelayanan Background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-cover object-center select-none pointer-events-none z-0"
-        />
+        <picture className="absolute inset-0 z-0">
+          <source media="(max-width: 640px)" srcSet="/image/pelayanan-mobile.webp" />
+          <source media="(min-width: 641px)" srcSet="/image/pelayanan.webp" />
+          <img
+            src="/image/pelayanan.webp"
+            alt="Pelayanan Background"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-center select-none pointer-events-none"
+          />
+        </picture>
         <div className="absolute inset-0 bg-[#FFFFFF]/90 z-10" />
         <div className="relative z-20 max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#291F15] leading-tight tracking-tight max-w-3xl mx-auto drop-shadow-sm">
