@@ -1,5 +1,6 @@
 import BerandaContent from "./components/BerandaContent";
 import { Metadata } from "next";
+import ReactDOM from "react-dom";
 
 export const metadata: Metadata = {
   title: "Kiswah.id | Layanan Umrah & Haji Khusus Eksklusif",
@@ -26,6 +27,11 @@ export const metadata: Metadata = {
 };
 
 export default function BerandaPage() {
+  ReactDOM.preload("/image/hero.webp", {
+    as: "image",
+    fetchPriority: "high",
+  });
+
   return <BerandaContent />;
 }
 

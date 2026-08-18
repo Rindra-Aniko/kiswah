@@ -51,11 +51,12 @@ export default function BerandaContent() {
       {/* Section Utama Hero */}
       <section className="relative w-full min-h-[600px] md:min-h-[90vh] flex items-center overflow-hidden py-16 px-4 sm:px-8 md:px-16 lg:px-24">
         <Image
-          src={heroImg}
+          src="/image/hero.webp"
           alt="Hero Background"
           fill
           priority
           fetchPriority="high"
+          unoptimized
           sizes="100vw"
           className="object-cover object-center select-none pointer-events-none z-0"
         />

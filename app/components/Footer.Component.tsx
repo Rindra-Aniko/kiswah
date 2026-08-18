@@ -9,7 +9,7 @@ export default function Footer() {
   const { dict } = useLanguage();
 
   return (
-    <footer role="contentinfo" className="bg-[#291F15] text-white font-poppins pt-14 pb-8 px-4 sm:px-8 md:px-16 lg:px-24 border-t border-[#B48421]/20">
+    <footer role="contentinfo" className="bg-[#291F15] text-white font-poppins pt-14 pb-8 px-4 sm:px-8 md:px-16 lg:px-24 border-t border-[#B48421]/20 min-h-[420px] sm:min-h-[380px] box-border">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 lg:gap-12 pb-12">
         
         {/* Kolom 1: Logo & Deskripsi Perusahaan */}

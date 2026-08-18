@@ -11,7 +11,7 @@ const WhatsAppFloat = dynamic(() => import("./components/WhatsAppFloat"));
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
@@ -86,7 +86,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}
+        className={`${poppins.className} ${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}
       >
         <NextTopLoader 
           color="#B48421"
