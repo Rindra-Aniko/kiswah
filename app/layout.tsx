@@ -1,16 +1,20 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins, Nova_Square, Freehand } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Navbar from "./components/Navbar.Components";
 import Footer from "./components/Footer.Component";
-import WhatsAppFloat from "./components/WhatsAppFloat";
 import NextTopLoader from 'nextjs-toploader';
+
+const WhatsAppFloat = dynamic(() => import("./components/WhatsAppFloat"));
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const novaSquare = Nova_Square({
@@ -18,6 +22,8 @@ const novaSquare = Nova_Square({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const freehand = Freehand({
@@ -25,6 +31,8 @@ const freehand = Freehand({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -75,9 +83,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased`}
+        suppressHydrationWarning
+        className={`${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}
       >
         <NextTopLoader 
           color="#B48421"
@@ -91,10 +100,16 @@ export default function RootLayout({
           shadow="0 0 10px #B48421,0 0 5px #B48421"
         />
         <LanguageProvider>
-          <Navbar />
-          {children}
-          <WhatsAppFloat />
-          <Footer />
+          <div className="flex flex-col min-h-screen w-full">
+            <header className="w-full sticky top-0 z-[999]">
+              <Navbar />
+            </header>
+            <main id="main-content" role="main" className="flex-grow flex-1 w-full">
+              {children}
+            </main>
+            <WhatsAppFloat />
+            <Footer />
+          </div>
         </LanguageProvider>
       </body>
     </html>

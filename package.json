@@ -18,6 +18,7 @@
     "@tiptap/react": "^3.25.0",
     "@tiptap/starter-kit": "^3.25.0",
     "bcrypt-ts": "^8.0.1",
+    "critters": "^0.0.23",
     "drizzle-orm": "^0.45.2",
     "jose": "^6.2.3",
     "next": "16.2.7",

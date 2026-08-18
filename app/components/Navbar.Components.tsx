@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-[#2a1d12] sticky top-0 z-[999] h-[72px] shadow-lg">
+      <nav role="navigation" aria-label="Main Navigation" className="w-full bg-[#2a1d12] h-[72px] shadow-lg">
         <div className="w-full h-full max-w-7xl mx-auto flex items-center justify-between px-5 lg:px-10">
           
           {/* LOGO */}

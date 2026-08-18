@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizeCss: true,
+  },
   allowedDevOrigins: ['192.168.18.241'],
   images: {
     formats: ['image/avif', 'image/webp'],

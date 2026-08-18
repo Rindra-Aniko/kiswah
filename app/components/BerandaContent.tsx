@@ -1,14 +1,23 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import heroImg from "@/public/image/hero.webp";
 import pelayananImg from "@/public/image/pelayanan.webp";
 import Cekpaket from "./Cekpaket.Component";
-import TestimoniCarousel from "./Testimoni.Component";
 import ScrollReveal from "./ScrollReveal";
 import { useLanguage } from "@/lib/i18n/context";
+
+const TestimoniCarousel = dynamic(() => import("./Testimoni.Component"), {
+  ssr: true,
+  loading: () => (
+    <div className="w-full min-h-[400px] flex items-center justify-center bg-[#fdfcfb]">
+      <div className="w-8 h-8 rounded-full border-2 border-[#B48421] border-t-transparent animate-spin" />
+    </div>
+  ),
+});
 
 export default function BerandaContent() {
   const { dict } = useLanguage();
@@ -47,7 +56,7 @@ export default function BerandaContent() {
   ];
 
   return (
-    <main>
+    <div className="w-full">
       {/* Section Utama Hero */}
       <section className="relative w-full min-h-[600px] md:min-h-[90vh] flex items-center overflow-hidden py-16 px-4 sm:px-8 md:px-16 lg:px-24">
         <Image
@@ -97,9 +106,9 @@ export default function BerandaContent() {
         </div>
 
         {/* Badge Promosi GRATIS TOUR */}
-        <div className="absolute bottom-6 right-4 sm:right-8 md:right-16 lg:right-24 z-30">
-          <div className="relative bg-[#1A130F] border-l-4 border-[#B48421] text-white px-8 py-6 rounded-br-3xl shadow-2xl transform lg:rotate-2 max-w-xs w-full border border-gray-800">
-            <div className="absolute top-0 right-0 w-3 h-16 bg-[#B48421] transform translate-x-1 -translate-y-2 rotate-45 hidden sm:block" />
+        <div className="absolute bottom-6 right-4 sm:right-8 md:right-16 lg:right-24 z-30 pointer-events-none">
+          <div className="relative bg-[#1A130F] border-l-4 border-l-[#B48421] border border-gray-800 text-white px-8 py-6 rounded-br-3xl shadow-2xl transform lg:rotate-2 w-72 sm:w-80 min-h-[140px] sm:min-h-[152px] box-border flex flex-col justify-center overflow-hidden">
+            <div className="absolute top-0 right-0 w-3 h-16 bg-[#B48421] transform translate-x-1 -translate-y-2 rotate-45 hidden sm:block pointer-events-none" />
             
             <div className="flex flex-col text-left space-y-1">
               <span className="font-poppins text-[#B48421] font-extrabold text-2xl sm:text-3xl tracking-wider uppercase leading-tight">
@@ -167,7 +176,7 @@ export default function BerandaContent() {
 
       {/* CTA Footer Section */}
       <section className="w-full bg-transparent py-12 px-4 sm:px-8 md:px-16 lg:px-24">
-        <div className="max-w-5xl mx-auto rounded-[24px] sm:rounded-[32px] px-6 py-12 sm:py-16 md:py-20 text-center shadow-xl relative overflow-hidden">
+        <div className="max-w-5xl mx-auto rounded-[24px] sm:rounded-[32px] px-6 py-12 sm:py-16 md:py-20 text-center shadow-xl relative overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[360px] flex flex-col justify-center items-center">
           <Image
             src={pelayananImg}
             alt="Pelayanan Background"
@@ -179,7 +188,7 @@ export default function BerandaContent() {
           />
           <div className="absolute inset-0 bg-[#B48421]/90 z-10 mix-blend-multiply" />
           
-          <div className="relative z-20 flex flex-col space-y-2 mb-8 sm:mb-10">
+          <div className="relative z-20 flex flex-col space-y-2 mb-8 sm:mb-10 w-full">
             <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-4xl text-white tracking-wide text-balance leading-snug">
               {dict.home.ctaHeading1}
             </h2>
@@ -188,7 +197,7 @@ export default function BerandaContent() {
             </p>
           </div>
 
-          <div className="relative z-10 flex justify-center">
+          <div className="relative z-10 flex justify-center w-full">
             <Link
               href="/jadwal"
               className="inline-block font-poppins font-normal text-base md:text-xl text-white bg-[#1A130F] hover:bg-[#291F15] px-8 sm:px-12 py-4 rounded-[16px] sm:rounded-[20px] shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 tracking-wider uppercase text-center max-w-xs sm:max-w-md"
@@ -199,6 +208,6 @@ export default function BerandaContent() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
