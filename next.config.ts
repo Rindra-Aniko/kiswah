@@ -2,8 +2,12 @@ import type { NextConfig } from "next";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 
 const nextConfig: NextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
   experimental: {
     optimizeCss: true,
+    optimizePackageImports: ['react-icons', 'nextjs-toploader'],
   },
   allowedDevOrigins: ['192.168.18.241'],
   images: {
