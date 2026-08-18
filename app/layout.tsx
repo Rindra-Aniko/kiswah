@@ -89,7 +89,7 @@ export default function RootLayout({
         className={`${poppins.className} ${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}
       >
         <ClientTopLoader />
-        <LanguageProvider>
+        <LanguageProvider initialLocale="en">
           <div className="flex flex-col min-h-screen w-full">
             <header className="w-full sticky top-0 z-[999]">
               <Navbar />

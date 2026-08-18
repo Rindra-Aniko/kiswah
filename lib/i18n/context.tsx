@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({
   children,
-  initialLocale = 'id',
+  initialLocale = 'en',
 }: {
   children: React.ReactNode;
   initialLocale?: Locale;
@@ -56,8 +56,8 @@ export function useLanguage() {
   if (!context) {
     // Fallback if used outside provider
     return {
-      locale: 'id' as Locale,
-      dict: getDictionary('id'),
+      locale: 'en' as Locale,
+      dict: getDictionary('en'),
       setLocale: () => {},
     };
   }
