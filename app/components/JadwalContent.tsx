@@ -26,15 +26,17 @@ export default function JadwalContent({ packages }: { packages: SchedulePackage[
     <div>
       {/* Hero Section */}
       <section className="relative w-full min-h-[60vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center overflow-hidden">
-        <Image
-          src={pelayananImg}
-          alt="Baitullah Background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-cover object-center select-none pointer-events-none z-0"
-        />
+        <picture className="absolute inset-0 z-0">
+          <source media="(max-width: 640px)" srcSet="/image/pelayanan-mobile.webp" />
+          <source media="(min-width: 641px)" srcSet="/image/pelayanan.webp" />
+          <img
+            src="/image/pelayanan.webp"
+            alt="Baitullah Background"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-center select-none pointer-events-none"
+          />
+        </picture>
         <div className="absolute inset-0 z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 sm:via-white/70 to-white/10 md:to-transparent" />
         </div>

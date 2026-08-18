@@ -9,6 +9,8 @@ import { useLanguage } from '@/lib/i18n/context';
 
 export default function PanduanUmrohContent() {
   const { dict } = useLanguage();
+  const [showPreview1, setShowPreview1] = React.useState(false);
+  const [showPreview2, setShowPreview2] = React.useState(false);
 
   const steps = [
     {
@@ -177,13 +179,38 @@ export default function PanduanUmrohContent() {
               <p className="font-poppins text-xs sm:text-sm text-[#291F15]/80 mb-4 h-12">
                 {(dict.panduan as any).book1Desc}
               </p>
-              <div className="relative w-full aspect-[4/3] min-h-[350px] rounded-xl overflow-hidden bg-white border border-gray-150 shadow-inner mb-4">
-                <iframe 
-                  src="https://drive.google.com/file/d/1hxoKvNMBvQmRP62g3slG9ymkTvBkRn_M/preview" 
-                  title="Buku Tuntunan Manasik Umroh" 
-                  className="absolute inset-0 w-full h-full border-none"
-                  allowFullScreen={true}
-                />
+              <div className="relative w-full aspect-[4/3] min-h-[350px] rounded-xl overflow-hidden bg-white border border-gray-150 shadow-inner mb-4 flex items-center justify-center">
+                {showPreview1 ? (
+                  <iframe 
+                    src="https://drive.google.com/file/d/1hxoKvNMBvQmRP62g3slG9ymkTvBkRn_M/preview" 
+                    title="Buku Tuntunan Manasik Umroh" 
+                    className="absolute inset-0 w-full h-full border-none"
+                    loading="lazy"
+                    allowFullScreen={true}
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-6 text-center space-y-4 bg-gradient-to-b from-amber-50/50 to-white w-full h-full">
+                    <div className="w-16 h-16 rounded-2xl bg-[#B48421]/10 text-[#B48421] flex items-center justify-center shadow-sm">
+                      <FiBookOpen className="w-8 h-8" />
+                    </div>
+                    <div className="space-y-1">
+                      <p className="font-poppins font-bold text-base text-[#291F15]">
+                        {(dict.panduan as any).book1Title || 'Buku Tuntunan Manasik Umroh'}
+                      </p>
+                      <p className="font-poppins text-xs text-gray-500 max-w-xs">
+                        Panduan lengkap tata cara ibadah umroh sesuai sunnah
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setShowPreview1(true)}
+                      className="inline-flex items-center gap-2 py-2.5 px-6 rounded-xl font-poppins font-semibold text-xs text-white bg-[#B48421] hover:bg-[#966a10] shadow-md transition-all duration-200 cursor-pointer"
+                    >
+                      <FiBookOpen className="w-4 h-4" />
+                      <span>Tampilkan Pratinjau Buku</span>
+                    </button>
+                  </div>
+                )}
               </div>
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <a
@@ -205,13 +232,38 @@ export default function PanduanUmrohContent() {
               <p className="font-poppins text-xs sm:text-sm text-[#291F15]/80 mb-4 h-12">
                 {(dict.panduan as any).book2Desc}
               </p>
-              <div className="relative w-full aspect-[4/3] min-h-[350px] rounded-xl overflow-hidden bg-white border border-gray-150 shadow-inner mb-4">
-                <iframe 
-                  src="https://drive.google.com/file/d/1ml6U2PSX4r7-tLG4LesFBTFXOAL9DJYN/preview" 
-                  title="Buku Doa & Dzikir Manasik" 
-                  className="absolute inset-0 w-full h-full border-none"
-                  allowFullScreen={true}
-                />
+              <div className="relative w-full aspect-[4/3] min-h-[350px] rounded-xl overflow-hidden bg-white border border-gray-150 shadow-inner mb-4 flex items-center justify-center">
+                {showPreview2 ? (
+                  <iframe 
+                    src="https://drive.google.com/file/d/1ml6U2PSX4r7-tLG4LesFBTFXOAL9DJYN/preview" 
+                    title="Buku Doa & Dzikir Manasik" 
+                    className="absolute inset-0 w-full h-full border-none"
+                    loading="lazy"
+                    allowFullScreen={true}
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-6 text-center space-y-4 bg-gradient-to-b from-amber-50/50 to-white w-full h-full">
+                    <div className="w-16 h-16 rounded-2xl bg-[#B48421]/10 text-[#B48421] flex items-center justify-center shadow-sm">
+                      <FiBookOpen className="w-8 h-8" />
+                    </div>
+                    <div className="space-y-1">
+                      <p className="font-poppins font-bold text-base text-[#291F15]">
+                        {(dict.panduan as any).book2Title || 'Buku Doa & Dzikir Manasik'}
+                      </p>
+                      <p className="font-poppins text-xs text-gray-500 max-w-xs">
+                        Kumpulan doa dan dzikir ibadah manasik umroh
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setShowPreview2(true)}
+                      className="inline-flex items-center gap-2 py-2.5 px-6 rounded-xl font-poppins font-semibold text-xs text-white bg-[#B48421] hover:bg-[#966a10] shadow-md transition-all duration-200 cursor-pointer"
+                    >
+                      <FiBookOpen className="w-4 h-4" />
+                      <span>Tampilkan Pratinjau Buku</span>
+                    </button>
+                  </div>
+                )}
               </div>
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <a

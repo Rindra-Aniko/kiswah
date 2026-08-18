@@ -83,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" style={poppins.style} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${poppins.className} ${poppins.variable} ${novaSquare.variable} ${freehand.variable} antialiased min-h-screen flex flex-col bg-white text-[#291F15]`}

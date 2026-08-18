@@ -3,7 +3,10 @@ import { db } from '@/lib/db';
 import { articles, categories } from '@/lib/db/schema';
 import { eq, desc, and, like, count } from 'drizzle-orm';
 import { Metadata } from 'next';
+import ReactDOM from 'react-dom';
 import ArtikelContent from '../components/ArtikelContent';
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Info & Artikel Religi",
@@ -20,6 +23,17 @@ export default async function ArtikelPage({
 }: {
   searchParams: Promise<{ search?: string; category?: string; page?: string }>;
 }) {
+  ReactDOM.preload("/image/haji_khusus-mobile.webp", {
+    as: "image",
+    fetchPriority: "high",
+    media: "(max-width: 640px)",
+  });
+  ReactDOM.preload("/image/haji_khusus.webp", {
+    as: "image",
+    fetchPriority: "high",
+    media: "(min-width: 641px)",
+  });
+
   const { search = '', category: categorySlug = '', page = '1' } = await searchParams;
   const currentPage = parseInt(page) || 1;
   const pageSize = 6;
@@ -41,23 +55,20 @@ export default async function ArtikelPage({
     categoryId ? eq(articles.categoryId, categoryId) : undefined
   );
 
-  // 3. Fetch Articles with pagination
-  const publishedArticles = await db.query.articles.findMany({
-    where: whereClause,
-    orderBy: [desc(articles.createdAt)],
-    limit: pageSize,
-    offset: offset,
-    with: {
-      author: true,
-      category: true,
-    },
-  });
-
-  // 4. Get total count for pagination
-  const [totalCountRes] = await db
-    .select({ total: count() })
-    .from(articles)
-    .where(whereClause);
+  // 3. Fetch Articles & total count in parallel
+  const [publishedArticles, [totalCountRes]] = await Promise.all([
+    db.query.articles.findMany({
+      where: whereClause,
+      orderBy: [desc(articles.createdAt)],
+      limit: pageSize,
+      offset: offset,
+      with: {
+        author: true,
+        category: true,
+      },
+    }),
+    db.select({ total: count() }).from(articles).where(whereClause),
+  ]);
   
   const totalArticles = totalCountRes?.total || 0;
   const totalPages = Math.ceil(totalArticles / pageSize);

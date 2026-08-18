@@ -45,15 +45,17 @@ export default function ArtikelContent({
     <div className="min-h-screen bg-gray-50 font-poppins pb-20">
       {/* Header Section */}
       <div className="relative py-24 px-4 overflow-hidden">
-        <Image
-          src={hajiKhususImg}
-          alt="Info Background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-cover object-center select-none pointer-events-none z-0"
-        />
+        <picture className="absolute inset-0 z-0">
+          <source media="(max-width: 640px)" srcSet="/image/haji_khusus-mobile.webp" />
+          <source media="(min-width: 641px)" srcSet="/image/haji_khusus.webp" />
+          <img
+            src="/image/haji_khusus.webp"
+            alt="Info Background"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-center select-none pointer-events-none"
+          />
+        </picture>
         <div className="absolute inset-0 bg-[#291F15]/85 mix-blend-multiply z-10" />
         <div className="relative z-20 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">

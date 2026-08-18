@@ -24,6 +24,7 @@ const managementStaff: TeamMember[] = [
 
 export default function TentangKamiContent() {
   const { dict } = useLanguage();
+  const [showInteractiveMap, setShowInteractiveMap] = React.useState(false);
 
   const professionalTeam: TeamMember[] = [
     { id: 1, name: 'DR. HADIAL PUTRA, M.Ag', role: (dict.tentang as any).roleCommissioner || 'Komisaris', imageSrc: '/team/hadial.webp' },
@@ -298,18 +299,52 @@ export default function TentangKamiContent() {
               </div>
             </div>
 
-            <div className="col-span-1 lg:col-span-7 relative min-h-[380px] sm:min-h-[420px] md:min-h-[460px] rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm">
-              <iframe
-                src="https://maps.google.com/maps?q=Dusun%20Baru%20Semurup,%20Air%20Hangat%20Barat,%20Kerinci,%20Jambi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Lokasi Kantor Kiswah Tour & Travel - Kerinci, Jambi"
-                className="absolute inset-0 w-full h-full grayscale-[10%] contrast-[105%] hover:grayscale-0 transition-all duration-500"
-              />
+            <div className="col-span-1 lg:col-span-7 relative min-h-[380px] sm:min-h-[420px] md:min-h-[460px] rounded-[2rem] overflow-hidden border border-[#BD8A15]/20 shadow-sm flex items-center justify-center bg-gradient-to-br from-[#291F15]/5 via-white to-[#BD8A15]/10">
+              {showInteractiveMap ? (
+                <iframe
+                  src="https://maps.google.com/maps?q=Dusun%20Baru%20Semurup,%20Air%20Hangat%20Barat,%20Kerinci,%20Jambi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokasi Kantor Kiswah Tour & Travel - Kerinci, Jambi"
+                  className="absolute inset-0 w-full h-full grayscale-[10%] contrast-[105%] hover:grayscale-0 transition-all duration-500"
+                />
+              ) : (
+                <div className="flex flex-col items-center justify-center p-8 text-center space-y-5 w-full h-full relative z-10">
+                  <div className="w-20 h-20 rounded-3xl bg-[#B48421]/15 text-[#B48421] flex items-center justify-center shadow-inner">
+                    <FiMapPin className="w-10 h-10" />
+                  </div>
+                  <div className="space-y-1.5 max-w-sm">
+                    <h4 className="font-poppins font-bold text-lg text-[#291F15]">
+                      Peta Lokasi Kantor Pusat
+                    </h4>
+                    <p className="font-poppins text-xs sm:text-sm text-[#291F15]/75 leading-relaxed">
+                      Dusun Baru Semurup, Air Hangat Barat, Kab. Kerinci, Jambi
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row items-center gap-3 pt-2 w-full max-w-xs justify-center">
+                    <button
+                      type="button"
+                      onClick={() => setShowInteractiveMap(true)}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-poppins font-semibold text-xs text-white bg-[#B48421] hover:bg-[#966a10] shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer"
+                    >
+                      <FiMapPin className="w-4 h-4" />
+                      <span>Muat Peta Interaktif</span>
+                    </button>
+                    <a
+                      href="https://maps.google.com/?q=Dusun%20Baru%20Semurup,%20Air%20Hangat%20Barat,%20Kerinci,%20Jambi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-poppins font-semibold text-xs text-[#291F15] bg-white hover:bg-gray-50 border border-gray-200 shadow-sm transition-all duration-300 active:scale-95"
+                    >
+                      <span>Buka di Google Maps</span>
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
