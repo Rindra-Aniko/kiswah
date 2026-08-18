@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { HiArrowLeft, HiCalendar, HiUser, HiPencil } from 'react-icons/hi';
 import { getSession } from '@/lib/auth';
 import { Metadata } from 'next';
+import './article.css';
 
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
