@@ -12,7 +12,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  display: "swap",
+  display: "optional",
   preload: true,
   adjustFontFallback: true,
 });
@@ -21,7 +21,7 @@ const novaSquare = Nova_Square({
   variable: "--font-nova-square",
   subsets: ["latin"],
   weight: ["400"],
-  display: "swap",
+  display: "optional",
   preload: true,
   adjustFontFallback: true,
 });
@@ -30,7 +30,7 @@ const freehand = Freehand({
   variable: "--font-freehand",
   subsets: ["latin"],
   weight: ["400"],
-  display: "swap",
+  display: "optional",
   preload: true,
   adjustFontFallback: true,
 });
@@ -104,7 +104,7 @@ export default function RootLayout({
             <header className="w-full sticky top-0 z-[999]">
               <Navbar />
             </header>
-            <main id="main-content" role="main" className="flex-grow flex-1 w-full">
+            <main id="main-content" role="main" className="flex-grow flex-1 w-full min-h-[70vh]">
               {children}
             </main>
             <WhatsAppFloat />
