@@ -7,8 +7,6 @@ import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '@/lib/i18n/context';
 import girlTuImg from '@/public/image/girl_tu.webp';
 import hajiKhususImg from '@/public/image/haji_khusus.webp';
-import mesirImg from '@/public/image/mesir.jpg';
-import istanbulImg from '@/public/image/istanbul.jpg';
 
 export default function LayananContent() {
   const { dict } = useLanguage();
@@ -259,10 +257,9 @@ export default function LayananContent() {
               <div className="lg:col-span-5 relative">
                 <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                   <Image 
-                    src={mesirImg} 
+                    src="/image/mesir.jpg" 
                     alt="Tour Muslim Mesir Piramida Kiswah Travel" 
                     fill
-                    placeholder="blur"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                     className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                   />
@@ -298,10 +295,9 @@ export default function LayananContent() {
               <div className="lg:col-span-5 relative order-first lg:order-last">
                 <div className="relative h-full min-h-[300px] rounded-[1.8rem] overflow-hidden border-4 border-[#BD8A15] bg-[#F9F9F9] shadow-xl group">
                   <Image 
-                    src={istanbulImg} 
+                    src="/image/istanbul.jpg" 
                     alt="Tour Muslim Istanbul Turki Kiswah Travel" 
                     fill
-                    placeholder="blur"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                     className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                   />
